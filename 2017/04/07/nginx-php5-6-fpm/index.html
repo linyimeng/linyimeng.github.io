@@ -96,7 +96,7 @@
 <meta property="og:description" content="ubuntu16.04 下配置 nginx php5.6 的运行环境。">
 <meta property="og:image" content="http://onzn8e1ny.bkt.clouddn.com/nginx_success.png">
 <meta property="og:image" content="http://onzn8e1ny.bkt.clouddn.com/phpinfo.png">
-<meta property="og:updated_time" content="2017-04-07T12:19:14.623Z">
+<meta property="og:updated_time" content="2017-04-07T16:34:09.666Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ubuntu16.04 nginx php5.6-fpm环境搭建">
 <meta name="twitter:description" content="ubuntu16.04 下配置 nginx php5.6 的运行环境。">
@@ -125,6 +125,19 @@
     }
   };
 </script>
+
+
+<script>
+	(function(){
+		if(''){
+			if (prompt('请输入文章密码','') !== ''){
+				alert('密码错误！');
+				window.location.href="/"; 
+			}
+		}
+	})();
+</script>
+
 
 
 
@@ -370,8 +383,13 @@
 <pre><code>$ sudo add-apt-repository ppa:ondrej/php
 </code></pre><p>添加后，更新下本机软件列表</p>
 <pre><code>$ sudo apt-get update
-</code></pre><h3 id="安装php5-6"><a href="#安装php5-6" class="headerlink" title="安装php5.6"></a>安装php5.6</h3><p>安装php5.6, 及相关模块</p>
-<pre><code>$ sudo apt-get install php5.6 php5.6-fpm
+</code></pre><h3 id="安装php5-6"><a href="#安装php5-6" class="headerlink" title="安装php5.6"></a>安装php5.6</h3><p>首先，查看本机有没有已经安装PHP及相关模块</p>
+<pre><code>$ dpkg -l | grep php | awk &apos;{print $2}&apos; | tr &quot;\n&quot; &quot; &quot;
+</code></pre><p>如已经安装了PHP,可以查看版本是否符合当前要求，如不符合，可卸载</p>
+<pre><code>$ sudo aptitude purge `dpkg -l | grep php| awk &apos;{print $2}&apos; |tr &quot;\n&quot; &quot; &quot;`
+</code></pre><p>卸载完成后可进行安装</p>
+<p>安装php5.6, 及相关模块</p>
+<pre><code>$ sudo apt-get install php5.6 php5.6-fpm php5.6-mysql php5.6-gd php5.6-curl php5.6-common php5.6-cli php5.6-opcache php5.6-readline
 </code></pre><p>安装后，用一下命令检查是否正确安装对应的php版本</p>
 <pre><code>$ sudo php -v
 </code></pre><h2 id="配置php5-6-fpm"><a href="#配置php5-6-fpm" class="headerlink" title="配置php5.6-fpm"></a>配置php5.6-fpm</h2><p>安装好后，默认的php5.6-fpm的配置文件在<code>/etc/php/5.6/fpm</code></p>
@@ -384,6 +402,7 @@
 $ sudo nginx    #打开 nginx
 $ sudo nginx -t #测试配置是否有语法错误
 $ sudo nginx -s reload|reopen|stop|quit  #重新加载配置|重启|停止|退出 nginx
+$ sudo nginx -s reopen # 重新打开日志文件
 </code></pre><p>更多详情请查看 <a href="http://www.nginx.cn/doc/" target="_blank" rel="external"><code>nginx中文文档</code></a>, <a href="http://nginx.org/en/docs/" target="_blank" rel="external"><code>nginx官方文档-英文</code></a></p>
 <h2 id="配置nginx"><a href="#配置nginx" class="headerlink" title="配置nginx"></a>配置nginx</h2><p>ubuntu中通过apt-get安装的nginx配置文件路径<code>/etc/nginx</code>，一般，为了方便管理，我会在每个独立的项目中去创建nginx相关的配置文件，再通过 <code>ln -s</code> 命令做软链至 <code>/etc/nginx/sites-enabled</code> 文件夹下<br>，在 <code>~</code> 路径下创建 <code>test</code> 文件夹， <code>vim nginx_php_fpm.conf</code> 创建编辑 <code>~/test/nginx_php_fpm.conf</code> 文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"># nginx_php_fpm.conf</div><div class="line">server &#123;</div><div class="line">    listen 80;</div><div class="line">    server_name localhost;</div><div class="line">    index index.php index.html;</div><div class="line"></div><div class="line">    root /home/yimeng/test; # ～/test, 本机用户名为yimeng</div><div class="line">    </div><div class="line">    location ~ \.php$ &#123;</div><div class="line">	    include snippets/fastcgi-php.conf;</div><div class="line">        fastcgi_pass unix:/run/php/php5.6-fpm.sock;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -396,6 +415,8 @@ $ sudo nginx -s reload|reopen|stop|quit  #重新加载配置|重启|停止|退�
 </code></pre><p>没有结果就是最好的结果，没有任何提示就代表一切顺利。</p>
 <h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>之前配置nginx的时候，已经创建了 <code>~/test</code> 文件夹，在该文件夹下 <code>vim index.php</code> 创建编辑 <code>index.php</code> 文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># index.php</div><div class="line">&lt;?php</div><div class="line">    phpinfo();</div></pre></td></tr></table></figure></p>
 <p>编辑保存后，访问 <a href="localhost">localhost</a>, 如显示如下页面，则代表成功。<br><img src="http://onzn8e1ny.bkt.clouddn.com/phpinfo.png" alt="phpinfo页" title="phpinfo页"></p>
+<h2 id="安装MySQL5"><a href="#安装MySQL5" class="headerlink" title="安装MySQL5"></a>安装MySQL5</h2><p>参考 <a href="http://blog.csdn.net/ys2127435/article/details/54882037" target="_blank" rel="external">Ubuntu16.04下安装MySQL5.x的简单方法</a></p>
+<p>推荐一个MySQL管理工具，点击可下载：<a href="https://dev.mysql.com/downloads/workbench/" target="_blank" rel="external">MySQL Workbench</a></p>
 
       
     </div>
@@ -462,6 +483,10 @@ $ sudo nginx -s reload|reopen|stop|quit  #重新加载配置|重启|停止|退�
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/07/rong-mall-sd-001/" rel="next" title="荣远商城二开-部署文档">
+                <i class="fa fa-chevron-left"></i> 荣远商城二开-部署文档
+              </a>
             
           </div>
 
@@ -543,7 +568,7 @@ $ sudo nginx -s reload|reopen|stop|quit  #重新加载配置|重启|停止|退�
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -554,7 +579,7 @@ $ sudo nginx -s reload|reopen|stop|quit  #重新加载配置|重启|停止|退�
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -565,7 +590,7 @@ $ sudo nginx -s reload|reopen|stop|quit  #重新加载配置|重启|停止|退�
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -600,7 +625,7 @@ $ sudo nginx -s reload|reopen|stop|quit  #重新加载配置|重启|停止|退�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装php5-6-php5-6-fpm"><span class="nav-number">1.</span> <span class="nav-text">安装php5.6 php5.6-fpm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加php-PPA"><span class="nav-number">1.1.</span> <span class="nav-text">添加php PPA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装php5-6"><span class="nav-number">1.2.</span> <span class="nav-text">安装php5.6</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置php5-6-fpm"><span class="nav-number">2.</span> <span class="nav-text">配置php5.6-fpm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装nginx"><span class="nav-number">3.</span> <span class="nav-text">安装nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">3.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx常用命令"><span class="nav-number">3.2.</span> <span class="nav-text">nginx常用命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置nginx"><span class="nav-number">4.</span> <span class="nav-text">配置nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">5.</span> <span class="nav-text">测试</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装php5-6-php5-6-fpm"><span class="nav-number">1.</span> <span class="nav-text">安装php5.6 php5.6-fpm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加php-PPA"><span class="nav-number">1.1.</span> <span class="nav-text">添加php PPA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装php5-6"><span class="nav-number">1.2.</span> <span class="nav-text">安装php5.6</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置php5-6-fpm"><span class="nav-number">2.</span> <span class="nav-text">配置php5.6-fpm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装nginx"><span class="nav-number">3.</span> <span class="nav-text">安装nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">3.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx常用命令"><span class="nav-number">3.2.</span> <span class="nav-text">nginx常用命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置nginx"><span class="nav-number">4.</span> <span class="nav-text">配置nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">5.</span> <span class="nav-text">测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装MySQL5"><span class="nav-number">6.</span> <span class="nav-text">安装MySQL5</span></a></li></ol></div>
             
 
           </div>
