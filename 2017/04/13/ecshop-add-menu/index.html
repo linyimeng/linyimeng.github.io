@@ -94,7 +94,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/13/ecshop-add-menu/index.html">
 <meta property="og:site_name" content="yimeng">
 <meta property="og:description" content="ecshop 这个不入流的货色，为啥会有很多人用，因为我们总是比较懒的吗！有现成免费的东西为啥不用，90% 的人你就算把安全漏洞告诉他，他也不会搞，当然，不怕一万，只怕万一。防范就是为了防范那 1% 的人，扯多了，回归正题，因为客户需求，所以需要对 ecshop 进行二次开发改进。在对用户需求分析过后，第一件事：添加后台管理菜单(一级菜单的添加和二级菜单的添加)">
-<meta property="og:updated_time" content="2017-04-13T03:52:51.505Z">
+<meta property="og:updated_time" content="2017-04-13T07:11:53.825Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ecshop二开--增加菜单">
 <meta name="twitter:description" content="ecshop 这个不入流的货色，为啥会有很多人用，因为我们总是比较懒的吗！有现成免费的东西为啥不用，90% 的人你就算把安全漏洞告诉他，他也不会搞，当然，不怕一万，只怕万一。防范就是为了防范那 1% 的人，扯多了，回归正题，因为客户需求，所以需要对 ecshop 进行二次开发改进。在对用户需求分析过后，第一件事：添加后台管理菜单(一级菜单的添加和二级菜单的添加)">
@@ -402,19 +402,19 @@
 <h2 id="二级菜单-功能模块-的添加"><a href="#二级菜单-功能模块-的添加" class="headerlink" title="二级菜单(功能模块)的添加"></a>二级菜单(功能模块)的添加</h2><p>添加一个功能模块，按平时软件设计的原则来说，在一个模块管理界面添加即可，但是，我们堪称反人类设计的 ecshop 需要5个步骤，而且这5个步骤都是需要对源码文件进行修改。</p>
 <ol>
 <li><p>编辑 <code>/admin/includes/inc_menu.php</code>, 添加二级菜单(功能模块)，及指定用于处理请求的php文件及传递act参数,添加的内容如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$modules[&apos;19_test&apos;][&apos;19_test01&apos;] = &apos;test.php?act=list&apos;;</div><div class="line">//19：菜单显示排序, 19_test: 一级分类, 19_test01:模块程序代号</div></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$modules[<span class="string">'19_test'</span>][<span class="string">'19_test01'</span>] = <span class="string">'test.php?act=list'</span>;</div><div class="line"><span class="comment">//19：菜单显示排序, 19_test: 一级分类, 19_test01:模块程序代号</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>编辑 <code>/languages/zh_cn/admin/common.php</code> 增加语言包，不然无法显示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$_LANG[&apos;19_test&apos;] = &apos;测试管理&apos;; //以一步骤名称为准</div><div class="line">$_LANG[&apos;19_test01&apos;] = &apos;测试01&apos;;</div></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$_LANG[<span class="string">'19_test'</span>] = <span class="string">'测试管理'</span>; <span class="comment">//以一步骤名称为准</span></div><div class="line">$_LANG[<span class="string">'19_test01'</span>] = <span class="string">'测试01'</span>;</div></pre></td></tr></table></figure>
 </li>
 <li><p>编辑 <code>/admin/includes/inc_priv.php</code> 增加权限，用于权限管理</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$purview[&apos;19_test01&apos;] = &apos;test01&apos;;</div></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$purview[<span class="string">'19_test01'</span>] = <span class="string">'test01'</span>;</div></pre></td></tr></table></figure>
 </li>
 <li><p>编辑 <code>/languages/zh_cn/admin/priv_action.php</code> 增加权限语言包，语言包，不是用来做多语言方案的吗？真是乱</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$_LANG[&apos;test&apos;] = &apos;测试管理&apos;;</div><div class="line">$_LANG[&apos;test01&apos;] = &apos;测试01&apos;;</div><div class="line">// test, test01是实际需要插入数据库的值</div></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$_LANG[<span class="string">'test'</span>] = <span class="string">'测试管理'</span>;</div><div class="line">$_LANG[<span class="string">'test01'</span>] = <span class="string">'测试01'</span>;</div><div class="line"><span class="comment">// test, test01是实际需要插入数据库的值</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>插入数据库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">insert into wrzcnet_admin_action (`parent_id`, `action_code`) values(0, &apos;test&apos;); --parent_id 为 0， 则为顶级菜单，即一级菜单</div><div class="line">insert into wrzcnet_admin_action (`parent_id`, `action_code`) values(222, &apos;test01&apos;); --parent_id 为父级菜单的 id, 这边假设 test 菜单的 id 为 222</div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">insert</span> <span class="keyword">into</span> wrzcnet_admin_action (<span class="string">`parent_id`</span>, <span class="string">`action_code`</span>) <span class="keyword">values</span>(<span class="number">0</span>, <span class="string">'test'</span>); <span class="comment">--parent_id 为 0， 则为顶级菜单，即一级菜单</span></div><div class="line"><span class="keyword">insert</span> <span class="keyword">into</span> wrzcnet_admin_action (<span class="string">`parent_id`</span>, <span class="string">`action_code`</span>) <span class="keyword">values</span>(<span class="number">222</span>, <span class="string">'test01'</span>); <span class="comment">--parent_id 为父级菜单的 id, 这边假设 test 菜单的 id 为 222</span></div></pre></td></tr></table></figure>
 </li>
 </ol>
 <h2 id="一级菜单的添加"><a href="#一级菜单的添加" class="headerlink" title="一级菜单的添加"></a>一级菜单的添加</h2><p>一级菜单只是对功能菜单(模块)的一个分组名称而已，在没有二级菜单的时候，是没法显示的，添加一级菜单的做法和添加二级菜单的做法相似，不再累诉</p>
@@ -595,6 +595,17 @@
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/linyimeng" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
         </div>
 
         
@@ -695,6 +706,8 @@
   
 
 
+  
+
 
 
 
@@ -716,6 +729,9 @@
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   

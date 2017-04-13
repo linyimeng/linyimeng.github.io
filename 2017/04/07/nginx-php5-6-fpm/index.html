@@ -96,7 +96,7 @@
 <meta property="og:description" content="ubuntu16.04 下配置 nginx php5.6 的运行环境。">
 <meta property="og:image" content="http://onzn8e1ny.bkt.clouddn.com/nginx_success.png">
 <meta property="og:image" content="http://onzn8e1ny.bkt.clouddn.com/phpinfo.png">
-<meta property="og:updated_time" content="2017-04-13T02:14:34.106Z">
+<meta property="og:updated_time" content="2017-04-13T07:12:50.268Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ubuntu16.04 nginx php5.6-fpm环境搭建">
 <meta name="twitter:description" content="ubuntu16.04 下配置 nginx php5.6 的运行环境。">
@@ -405,7 +405,7 @@ $ sudo nginx -s reload|reopen|stop|quit  #重新加载配置|重启|停止|退�
 $ sudo nginx -s reopen # 重新打开日志文件
 </code></pre><p>更多详情请查看 <a href="http://www.nginx.cn/doc/" target="_blank" rel="external"><code>nginx中文文档</code></a>, <a href="http://nginx.org/en/docs/" target="_blank" rel="external"><code>nginx官方文档-英文</code></a></p>
 <h2 id="配置nginx"><a href="#配置nginx" class="headerlink" title="配置nginx"></a>配置nginx</h2><p>ubuntu中通过apt-get安装的nginx配置文件路径<code>/etc/nginx</code>，一般，为了方便管理，我会在每个独立的项目中去创建nginx相关的配置文件，再通过 <code>ln -s</code> 命令做软链至 <code>/etc/nginx/sites-enabled</code> 文件夹下<br>，在 <code>~</code> 路径下创建 <code>test</code> 文件夹， <code>vim nginx_php_fpm.conf</code> 创建编辑 <code>~/test/nginx_php_fpm.conf</code> 文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"># nginx_php_fpm.conf</div><div class="line">server &#123;</div><div class="line">    listen 80;</div><div class="line">    server_name localhost;</div><div class="line">    index index.php index.html;</div><div class="line"></div><div class="line">    root /home/yimeng/test; # ～/test, 本机用户名为yimeng</div><div class="line">    </div><div class="line">    location ~ \.php$ &#123;</div><div class="line">	    include snippets/fastcgi-php.conf;</div><div class="line">        fastcgi_pass unix:/run/php/php5.6-fpm.sock;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># nginx_php_fpm.conf</span></div><div class="line"><span class="section">server</span> &#123;</div><div class="line">    <span class="attribute">listen</span> <span class="number">80</span>;</div><div class="line">    <span class="attribute">server_name</span> localhost;</div><div class="line">    <span class="attribute">index</span> index.php index.html;</div><div class="line"></div><div class="line">    <span class="attribute">root</span> /home/yimeng/test; <span class="comment"># ～/test, 本机用户名为yimeng</span></div><div class="line">    </div><div class="line">    <span class="attribute">location</span> <span class="regexp">~ \.php$</span> &#123;</div><div class="line">	    <span class="attribute">include</span> snippets/fastcgi-php.conf;</div><div class="line">        <span class="attribute">fastcgi_pass</span> unix:/run/php/php5.6-fpm.sock;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>编辑好后用 <code>ln -s</code> 命令创建软链</p>
 <pre><code>$ sudo ln -s ~/test/nginx_php_fpm.conf /etc/nginx/sites-enabled/
 </code></pre><p>创建后检验下配置是否正确</p>
@@ -413,7 +413,7 @@ $ sudo nginx -s reopen # 重新打开日志文件
 </code></pre><p>重新加载下配置</p>
 <pre><code>$ sudo nginx -s reload
 </code></pre><p>没有结果就是最好的结果，没有任何提示就代表一切顺利。</p>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>之前配置nginx的时候，已经创建了 <code>~/test</code> 文件夹，在该文件夹下 <code>vim index.php</code> 创建编辑 <code>index.php</code> 文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># index.php</div><div class="line">&lt;?php</div><div class="line">    phpinfo();</div></pre></td></tr></table></figure></p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>之前配置nginx的时候，已经创建了 <code>~/test</code> 文件夹，在该文件夹下 <code>vim index.php</code> 创建编辑 <code>index.php</code> 文件<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># index.php</span></div><div class="line"><span class="meta">&lt;?php</span></div><div class="line">    phpinfo();</div></pre></td></tr></table></figure></p>
 <p>编辑保存后，访问 <a href="localhost">localhost</a>, 如显示如下页面，则代表成功。<br><img src="http://onzn8e1ny.bkt.clouddn.com/phpinfo.png" alt="phpinfo页" title="phpinfo页"></p>
 <h2 id="安装MySQL5"><a href="#安装MySQL5" class="headerlink" title="安装MySQL5"></a>安装MySQL5</h2><p>参考 <a href="http://blog.csdn.net/ys2127435/article/details/54882037" target="_blank" rel="external">Ubuntu16.04下安装MySQL5.x的简单方法</a></p>
 <p>推荐一个MySQL管理工具，点击可下载：<a href="https://dev.mysql.com/downloads/workbench/" target="_blank" rel="external">MySQL Workbench</a></p>
@@ -602,6 +602,17 @@ $ sudo nginx -s reopen # 重新打开日志文件
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/linyimeng" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
         </div>
 
         
@@ -702,6 +713,8 @@ $ sudo nginx -s reopen # 重新打开日志文件
   
 
 
+  
+
 
 
 
@@ -723,6 +736,9 @@ $ sudo nginx -s reopen # 重新打开日志文件
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   
