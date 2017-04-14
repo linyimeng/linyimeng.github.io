@@ -292,6 +292,169 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://linyimeng.live/2017/04/14/Crontab-guide/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yimeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="林一梦技术分享">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/14/Crontab-guide/" itemprop="url">
+                  Crontab个人指南
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-14T14:53:00+08:00">
+                2017-04-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/指南集/" itemprop="url" rel="index">
+                    <span itemprop="name">指南集</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/04/14/Crontab-guide/" class="leancloud_visitors" data-flag-title="Crontab个人指南">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Crontab 个人指南</p>
+<h2 id="参阅资料"><a href="#参阅资料" class="headerlink" title="参阅资料"></a>参阅资料</h2><ul>
+<li><a href="http://crontab.org/" target="_blank" rel="external">Crontab官网</a></li>
+<li><a href="http://www.centoscn.com/CentOS/help/2014/1030/4025.html" target="_blank" rel="external">定时任务 Crontab命令 详解</a></li>
+</ul>
+<h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><h3 id="crontab-e"><a href="#crontab-e" class="headerlink" title="crontab -e"></a>crontab -e</h3><p>进入使用者的 cron 编辑，按照<code>crontab相关语法</code>添加保存即可，语法参考 <a href="http://www.centoscn.com/CentOS/help/2014/1030/4025.html" target="_blank" rel="external">定时任务 Crontab命令 详解</a></p>
+<h2 id="相关配置和日志"><a href="#相关配置和日志" class="headerlink" title="相关配置和日志"></a>相关配置和日志</h2><ul>
+<li><code>/etc/crontab</code> 配置系统的例行性任务</li>
+<li><code>/var/log/cron.log</code> 如无该日志文件，编辑如下<code>/etc/rsyslog.d/50-default.conf</code> 文件中，将 <code>cron.*              /var/log/cron.log</code> 前面的注释符#去掉，然后重启rsyslog <code>sudo service rsyslog restart</code></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://linyimeng.live/2017/04/13/nginx-php5-6-fpm-error/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1543,7 +1706,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
