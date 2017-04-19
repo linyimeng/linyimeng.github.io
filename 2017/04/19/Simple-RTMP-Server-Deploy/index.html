@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="感悟," />
+  <meta name="keywords" content="流媒体服务器," />
 
 
 
@@ -87,17 +87,24 @@
 
 
 
-<meta name="description" content="简单，轻松，本质">
-<meta name="keywords" content="感悟">
+<meta name="description" content="最近，老大让研究研究流媒体服务器相关的，找来找去，找到了一个由国内大神开源的Simple-RTMP-Server，SRS定位是运营级的互联网直播服务器集群，追求更好的概念完整性和最简单实现的代码。(官方介绍)。下载下来，部署安装熟悉配置试用，这一套组合拳打完后，感觉SRS不错，但听说要商业化了。 以下介绍安装，部署，使用的过程，我使用的机器是 ubuntu16.04，其他版本的操作系统未做尝试，所">
+<meta name="keywords" content="流媒体服务器">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Motto">
-<meta property="og:url" content="http://linyimeng.live/2017/04/06/hello-world/index.html">
+<meta property="og:title" content="Simple-RTMP-Server 部署配置指南">
+<meta property="og:url" content="http://linyimeng.live/2017/04/19/Simple-RTMP-Server-Deploy/index.html">
 <meta property="og:site_name" content="林一梦技术分享">
-<meta property="og:description" content="简单，轻松，本质">
-<meta property="og:updated_time" content="2017-04-07T14:56:14.000Z">
+<meta property="og:description" content="最近，老大让研究研究流媒体服务器相关的，找来找去，找到了一个由国内大神开源的Simple-RTMP-Server，SRS定位是运营级的互联网直播服务器集群，追求更好的概念完整性和最简单实现的代码。(官方介绍)。下载下来，部署安装熟悉配置试用，这一套组合拳打完后，感觉SRS不错，但听说要商业化了。 以下介绍安装，部署，使用的过程，我使用的机器是 ubuntu16.04，其他版本的操作系统未做尝试，所">
+<meta property="og:image" content="http://onzn8e1ny.bkt.clouddn.com/srs-deploy01.png">
+<meta property="og:image" content="http://onzn8e1ny.bkt.clouddn.com/srs-deploy02.png">
+<meta property="og:image" content="http://onzn8e1ny.bkt.clouddn.com/srs-deploy03.png">
+<meta property="og:image" content="http://onzn8e1ny.bkt.clouddn.com/srs-deploy04.png">
+<meta property="og:image" content="http://onzn8e1ny.bkt.clouddn.com/srs-deploy05.png">
+<meta property="og:image" content="http://onzn8e1ny.bkt.clouddn.com/srs-deploy06.png">
+<meta property="og:updated_time" content="2017-04-19T08:39:50.322Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Motto">
-<meta name="twitter:description" content="简单，轻松，本质">
+<meta name="twitter:title" content="Simple-RTMP-Server 部署配置指南">
+<meta name="twitter:description" content="最近，老大让研究研究流媒体服务器相关的，找来找去，找到了一个由国内大神开源的Simple-RTMP-Server，SRS定位是运营级的互联网直播服务器集群，追求更好的概念完整性和最简单实现的代码。(官方介绍)。下载下来，部署安装熟悉配置试用，这一套组合拳打完后，感觉SRS不错，但听说要商业化了。 以下介绍安装，部署，使用的过程，我使用的机器是 ubuntu16.04，其他版本的操作系统未做尝试，所">
+<meta name="twitter:image" content="http://onzn8e1ny.bkt.clouddn.com/srs-deploy01.png">
 
 
 
@@ -126,8 +133,8 @@
 
 <script>
 	(function(){
-		if('helloword'){
-			if (prompt('请输入文章密码','') !== 'helloword'){
+		if(''){
+			if (prompt('请输入文章密码','') !== ''){
 				alert('密码错误！');
 				window.location.href="/"; 
 			}
@@ -138,13 +145,13 @@
 
 
 
-  <link rel="canonical" href="http://linyimeng.live/2017/04/06/hello-world/"/>
+  <link rel="canonical" href="http://linyimeng.live/2017/04/19/Simple-RTMP-Server-Deploy/"/>
 
 
 
 
 
-  <title> Motto | 林一梦技术分享 </title>
+  <title> Simple-RTMP-Server 部署配置指南 | 林一梦技术分享 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -283,7 +290,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://linyimeng.live/2017/04/06/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://linyimeng.live/2017/04/19/Simple-RTMP-Server-Deploy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yimeng">
@@ -304,7 +311,7 @@
             
             
               
-                Motto
+                Simple-RTMP-Server 部署配置指南
               
             
           </h1>
@@ -319,8 +326,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-06T00:09:00+08:00">
-                2017-04-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-19T14:07:00+08:00">
+                2017-04-19
               </time>
             
 
@@ -330,28 +337,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/感悟/" itemprop="url" rel="index">
-                    <span itemprop="name">感悟</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -360,7 +345,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/04/06/hello-world/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/04/19/Simple-RTMP-Server-Deploy/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -369,7 +354,7 @@
 
           
           
-             <span id="/2017/04/06/hello-world/" class="leancloud_visitors" data-flag-title="Motto">
+             <span id="/2017/04/19/Simple-RTMP-Server-Deploy/" class="leancloud_visitors" data-flag-title="Simple-RTMP-Server 部署配置指南">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -398,7 +383,38 @@
       
 
       
-        <h2 id="简单，轻松，本质"><a href="#简单，轻松，本质" class="headerlink" title="简单，轻松，本质"></a>简单，轻松，本质</h2>
+        <p>最近，老大让研究研究流媒体服务器相关的，找来找去，找到了一个由国内大神开源的Simple-RTMP-Server，SRS定位是运营级的互联网直播服务器集群，追求更好的概念完整性和最简单实现的代码。(官方介绍)。下载下来，部署安装熟悉配置试用，这一套组合拳打完后，感觉SRS不错，但听说要商业化了。</p>
+<p>以下介绍安装，部署，使用的过程，我使用的机器是 ubuntu16.04，其他版本的操作系统未做尝试，所以，如果你用的版本和我的不同的话，可能和此文章描述有所差异，有关问题探讨下方评论留言。</p>
+<h2 id="下载编译安装"><a href="#下载编译安装" class="headerlink" title="下载编译安装"></a>下载编译安装</h2><h3 id="下载软件"><a href="#下载软件" class="headerlink" title="下载软件"></a>下载软件</h3><p>熟悉一个软件，当然是要先下载下来，下载之前，请确保您的系统安装了<code>git</code>,通过以下命令下载软件源代码,下载速度因人而已<img src="http://onzn8e1ny.bkt.clouddn.com/srs-deploy01.png" alt="srs-deploy01"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/ossrs/srs.git</div><div class="line"><span class="comment"># 下载速度过慢的，用以下地址</span></div><div class="line">$ git <span class="built_in">clone</span> https://git.oschina.net/winlinvip/srs.oschina.git</div></pre></td></tr></table></figure></p>
+<h3 id="编译源码"><a href="#编译源码" class="headerlink" title="编译源码"></a>编译源码</h3><p>因为下载下来的是源代码，所以我们还有自己编译。编译速度看机器，我自己编译了7，8分钟。</p>
+<p>首先，进入trunk目录 <code>cd srs/trunk</code>,这边目录结构如下<img src="http://onzn8e1ny.bkt.clouddn.com/srs-deploy02.png" alt="srs-deploy02"></p>
+<ul>
+<li><code>scripts</code> 一些脚本</li>
+<li><code>conf</code> 配置文件夹</li>
+<li><code>objs</code> 编译后的项目文件夹</li>
+<li><code>src</code> 源代码</li>
+</ul>
+<p>其他文件夹功能不再一一介绍</p>
+<p>编译可按照官方提供的方法<code>$ ./configure &amp;&amp; make</code>命令进行编译,但是许多依赖需要检查，比如 ffmpeg 等的安装，但是幸好，软件作者们给我们提供了编译构建脚本，在<code>scripts</code>文件夹内<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#使用软件提供的脚本进行构建</span></div><div class="line">$ ./scripts/build.sh</div></pre></td></tr></table></figure></p>
+<p>剩下的只有等待，一般编译过程不会出错，如果出错，那只能照着错误提示对应解决，如果毫无头绪，去洗把脸，重新来过。<br><img src="http://onzn8e1ny.bkt.clouddn.com/srs-deploy03.png" alt="srs-deploy03"><br>编译完成后，终端显示如下,<strong>仔细读读这个准没错</strong><br><img src="http://onzn8e1ny.bkt.clouddn.com/srs-deploy04.png" alt="srs-deploy04"><br><img src="http://onzn8e1ny.bkt.clouddn.com/srs-deploy05.png" alt="srs-deploy05"></p>
+<h2 id="运行软件"><a href="#运行软件" class="headerlink" title="运行软件"></a>运行软件</h2><p>编译真实一门考验耐心的活，为了这边文章，老弟我还特地再编译一次呢。终于迎来这一步。好，按照上一步骤，我们编译完成后，有一段说明，我们运行 <code>./objs/srs -c conf/srs.conf</code> 或者运行启动脚本 <code>./scripts/run.sh</code> 可启动RSR服务<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ./scripts/run.sh</div></pre></td></tr></table></figure></p>
+<p>运行 <code>run.sh</code> 脚本后终端显示如下</p>
+<p><img src="http://onzn8e1ny.bkt.clouddn.com/srs-deploy06.png" alt="srs-deploy"></p>
+<p>访问<code>http://localhost:8085</code>即可看到SRS的演示版本</p>
+<h2 id="编辑运行自定义配置"><a href="#编辑运行自定义配置" class="headerlink" title="编辑运行自定义配置"></a>编辑运行自定义配置</h2><p>通过以上步骤，我们安装软件，并且可以让demo跑起来，但是，真正应用的话还需要自己进行一些配置，配置文件主要在<code>conf</code>文件夹中，里面有很多实例可以参考，详细的配置项可以参考<a href="https://my.oschina.net/fengjihu/blog/413798" target="_blank" rel="external">srs配置-基本RTMP配置 &amp;&amp; 日志配置</a></p>
+<p>这里，我也给出我项目中应用的配置文件<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># yimeng_srs.conf</span></div><div class="line"><span class="attribute">listen</span>              <span class="number">1935</span>; <span class="comment">#监听端口</span></div><div class="line"><span class="attribute">max_connections</span>     <span class="number">1000</span>; <span class="comment">#最大连接数</span></div><div class="line"><span class="attribute">daemon</span>              <span class="literal">off</span>;</div><div class="line"><span class="attribute">srs_log_tank</span>        console;</div><div class="line"></div><div class="line"><span class="comment"># rtmp推流，并保留rtmp流至服务器</span></div><div class="line"><span class="attribute">vhost</span> __defaultVhost__ &#123;</div><div class="line">    <span class="section">dvr</span> &#123;</div><div class="line">        <span class="attribute">enabled</span>      <span class="literal">on</span>;</div><div class="line">        <span class="attribute">dvr_path</span>     ./objs/nginx/html/[app] /[stream].flv;  <span class="comment">#视频保存规则</span></div><div class="line">        <span class="attribute">dvr_plan</span>     session; <span class="comment">#按session方式保存</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment"># 点播</span></div><div class="line"><span class="section">http_server</span> &#123;</div><div class="line">    <span class="attribute">enabled</span>         <span class="literal">on</span>;</div><div class="line">    <span class="attribute">listen</span>          <span class="number">8080</span>;</div><div class="line">    <span class="attribute">dir</span>             ./objs/nginx/html;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="attribute">vhost</span> ossrs.net &#123;</div><div class="line">    <span class="section">http</span> &#123;</div><div class="line">        <span class="attribute">enabled</span>     <span class="literal">on</span>;</div><div class="line">        <span class="attribute">mount</span>       [vhost]/;</div><div class="line">        <span class="attribute">dir</span>         ./objs/nginx/html;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ./objs/srs -c conf/yimeng_srs.conf <span class="comment">#根据配置文件运行srs服务器</span></div></pre></td></tr></table></figure>
+<p>运行后即可使用</p>
+<p>客户端推流：rtmp://127.0.0.1:1935/sanzond_chat/1492590914977</p>
+<p>客户端订阅流播放：rtmp://127.0.0.1:1935/sanzond_chat/1492590914977 推流是什么地址，订阅播放流也是一样的地址</p>
+<p>客户端点播回放之前的视频：<a href="http://127.0.0.1:8080/sanzond_chat/1492590914977.flv" target="_blank" rel="external">http://127.0.0.1:8080/sanzond_chat/1492590914977.flv</a>  协议为http， 端口号为 8080，后面添加.flv即可下载</p>
+<h2 id="参阅资料"><a href="#参阅资料" class="headerlink" title="参阅资料"></a>参阅资料</h2><ul>
+<li><a href="https://github.com/ossrs/srs" target="_blank" rel="external">SRS github项目地址</a></li>
+<li><a href="https://github.com/ossrs/srs/wiki/v2_CN_Home" target="_blank" rel="external">SRS 官方文档 wiki</a></li>
+<li><a href="http://www.cuplayer.com/player/PlayerCode/SRS/2016/0113/2255.html" target="_blank" rel="external">SRS流媒体-RTMP部署的步骤</a></li>
+<li><a href="https://my.oschina.net/fengjihu/blog/413798" target="_blank" rel="external">srs配置-基本RTMP配置 &amp;&amp; 日志配置</a></li>
+</ul>
+
       
     </div>
 
@@ -448,7 +464,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/感悟/" rel="tag"># 感悟</a>
+            <a href="/tags/流媒体服务器/" rel="tag"># 流媒体服务器</a>
           
         </div>
       
@@ -461,15 +477,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/06/hexo/" rel="next" title="Hexo 指南">
-                <i class="fa fa-chevron-left"></i> Hexo 指南
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/16/vue2-resources/" rel="prev" title="vue2 学习资源">
+                vue2 学习资源 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -611,7 +627,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单，轻松，本质"><span class="nav-number">1.</span> <span class="nav-text">简单，轻松，本质</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载编译安装"><span class="nav-number">1.</span> <span class="nav-text">下载编译安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载软件"><span class="nav-number">1.1.</span> <span class="nav-text">下载软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译源码"><span class="nav-number">1.2.</span> <span class="nav-text">编译源码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行软件"><span class="nav-number">2.</span> <span class="nav-text">运行软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编辑运行自定义配置"><span class="nav-number">3.</span> <span class="nav-text">编辑运行自定义配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参阅资料"><span class="nav-number">4.</span> <span class="nav-text">参阅资料</span></a></li></ol></div>
             
 
           </div>
