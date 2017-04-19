@@ -87,23 +87,23 @@
 
 
 
-<meta name="description" content="最近，老大让研究研究流媒体服务器相关的，找来找去，找到了一个由国内大神开源的Simple-RTMP-Server，SRS定位是运营级的互联网直播服务器集群，追求更好的概念完整性和最简单实现的代码。(官方介绍)。下载下来，部署安装熟悉配置试用，这一套组合拳打完后，感觉SRS不错，但听说要商业化了。 以下介绍安装，部署，使用的过程，我使用的机器是 ubuntu16.04，其他版本的操作系统未做尝试，所">
+<meta name="description" content="最近，老大让研究研究流媒体服务器相关的，找来找去，找到了一个由国内大神开源的Simple-RTMP-Server，SRS定位是运营级的互联网直播服务器集群，追求更好的概念完整性和最简单实现的代码。(官方介绍)。下载下来，部署安装熟悉配置试用，这一套组合拳打完后，感觉SRS不错，但听说要商业化了。">
 <meta name="keywords" content="流媒体服务器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Simple-RTMP-Server 部署配置指南">
 <meta property="og:url" content="http://linyimeng.live/2017/04/19/Simple-RTMP-Server-Deploy/index.html">
 <meta property="og:site_name" content="林一梦技术分享">
-<meta property="og:description" content="最近，老大让研究研究流媒体服务器相关的，找来找去，找到了一个由国内大神开源的Simple-RTMP-Server，SRS定位是运营级的互联网直播服务器集群，追求更好的概念完整性和最简单实现的代码。(官方介绍)。下载下来，部署安装熟悉配置试用，这一套组合拳打完后，感觉SRS不错，但听说要商业化了。 以下介绍安装，部署，使用的过程，我使用的机器是 ubuntu16.04，其他版本的操作系统未做尝试，所">
+<meta property="og:description" content="最近，老大让研究研究流媒体服务器相关的，找来找去，找到了一个由国内大神开源的Simple-RTMP-Server，SRS定位是运营级的互联网直播服务器集群，追求更好的概念完整性和最简单实现的代码。(官方介绍)。下载下来，部署安装熟悉配置试用，这一套组合拳打完后，感觉SRS不错，但听说要商业化了。">
 <meta property="og:image" content="http://onzn8e1ny.bkt.clouddn.com/srs-deploy01.png">
 <meta property="og:image" content="http://onzn8e1ny.bkt.clouddn.com/srs-deploy02.png">
 <meta property="og:image" content="http://onzn8e1ny.bkt.clouddn.com/srs-deploy03.png">
 <meta property="og:image" content="http://onzn8e1ny.bkt.clouddn.com/srs-deploy04.png">
 <meta property="og:image" content="http://onzn8e1ny.bkt.clouddn.com/srs-deploy05.png">
 <meta property="og:image" content="http://onzn8e1ny.bkt.clouddn.com/srs-deploy06.png">
-<meta property="og:updated_time" content="2017-04-19T08:39:50.322Z">
+<meta property="og:updated_time" content="2017-04-19T08:45:40.663Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Simple-RTMP-Server 部署配置指南">
-<meta name="twitter:description" content="最近，老大让研究研究流媒体服务器相关的，找来找去，找到了一个由国内大神开源的Simple-RTMP-Server，SRS定位是运营级的互联网直播服务器集群，追求更好的概念完整性和最简单实现的代码。(官方介绍)。下载下来，部署安装熟悉配置试用，这一套组合拳打完后，感觉SRS不错，但听说要商业化了。 以下介绍安装，部署，使用的过程，我使用的机器是 ubuntu16.04，其他版本的操作系统未做尝试，所">
+<meta name="twitter:description" content="最近，老大让研究研究流媒体服务器相关的，找来找去，找到了一个由国内大神开源的Simple-RTMP-Server，SRS定位是运营级的互联网直播服务器集群，追求更好的概念完整性和最简单实现的代码。(官方介绍)。下载下来，部署安装熟悉配置试用，这一套组合拳打完后，感觉SRS不错，但听说要商业化了。">
 <meta name="twitter:image" content="http://onzn8e1ny.bkt.clouddn.com/srs-deploy01.png">
 
 
@@ -383,8 +383,7 @@
       
 
       
-        <p>最近，老大让研究研究流媒体服务器相关的，找来找去，找到了一个由国内大神开源的Simple-RTMP-Server，SRS定位是运营级的互联网直播服务器集群，追求更好的概念完整性和最简单实现的代码。(官方介绍)。下载下来，部署安装熟悉配置试用，这一套组合拳打完后，感觉SRS不错，但听说要商业化了。</p>
-<p>以下介绍安装，部署，使用的过程，我使用的机器是 ubuntu16.04，其他版本的操作系统未做尝试，所以，如果你用的版本和我的不同的话，可能和此文章描述有所差异，有关问题探讨下方评论留言。</p>
+        <p>最近，老大让研究研究流媒体服务器相关的，找来找去，找到了一个由国内大神开源的Simple-RTMP-Server，SRS定位是运营级的互联网直播服务器集群，追求更好的概念完整性和最简单实现的代码。(官方介绍)。下载下来，部署安装熟悉配置试用，这一套组合拳打完后，感觉SRS不错，但听说要商业化了。<br><a id="more"></a><br>以下介绍安装，部署，使用的过程，我使用的机器是 ubuntu16.04，其他版本的操作系统未做尝试，所以，如果你用的版本和我的不同的话，可能和此文章描述有所差异，有关问题探讨下方评论留言。</p>
 <h2 id="下载编译安装"><a href="#下载编译安装" class="headerlink" title="下载编译安装"></a>下载编译安装</h2><h3 id="下载软件"><a href="#下载软件" class="headerlink" title="下载软件"></a>下载软件</h3><p>熟悉一个软件，当然是要先下载下来，下载之前，请确保您的系统安装了<code>git</code>,通过以下命令下载软件源代码,下载速度因人而已<img src="http://onzn8e1ny.bkt.clouddn.com/srs-deploy01.png" alt="srs-deploy01"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/ossrs/srs.git</div><div class="line"><span class="comment"># 下载速度过慢的，用以下地址</span></div><div class="line">$ git <span class="built_in">clone</span> https://git.oschina.net/winlinvip/srs.oschina.git</div></pre></td></tr></table></figure></p>
 <h3 id="编译源码"><a href="#编译源码" class="headerlink" title="编译源码"></a>编译源码</h3><p>因为下载下来的是源代码，所以我们还有自己编译。编译速度看机器，我自己编译了7，8分钟。</p>
 <p>首先，进入trunk目录 <code>cd srs/trunk</code>,这边目录结构如下<img src="http://onzn8e1ny.bkt.clouddn.com/srs-deploy02.png" alt="srs-deploy02"></p>
