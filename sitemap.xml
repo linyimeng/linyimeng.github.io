@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://linyimeng.live/2017/05/01/linux-study-0001/</loc>
+    
+    <lastmod>2017-05-01T15:09:09.840Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://linyimeng.live/2017/04/13/nginx-php5-6-fpm-error/</loc>
+    
+    <lastmod>2017-05-01T14:25:12.256Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://linyimeng.live/2017/05/01/framework7-guide/</loc>
+    
+    <lastmod>2017-05-01T14:24:49.716Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://linyimeng.live/2017/04/06/hexo/</loc>
+    
+    <lastmod>2017-05-01T14:24:33.052Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://linyimeng.live/2017/04/06/Markdown-Guide/</loc>
+    
+    <lastmod>2017-05-01T14:24:23.668Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://linyimeng.live/2017/04/14/Crontab-guide/</loc>
+    
+    <lastmod>2017-05-01T14:24:05.788Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://linyimeng.live/baidu_verify_Sup4Wh23q4.html</loc>
     
     <lastmod>2017-04-23T14:24:35.239Z</lastmod>
@@ -19,20 +61,6 @@
     <loc>http://linyimeng.live/2017/04/16/vue2-resources/</loc>
     
     <lastmod>2017-04-15T16:30:53.575Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://linyimeng.live/2017/04/14/Crontab-guide/</loc>
-    
-    <lastmod>2017-04-14T08:41:07.939Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://linyimeng.live/2017/04/13/nginx-php5-6-fpm-error/</loc>
-    
-    <lastmod>2017-04-13T17:19:54.596Z</lastmod>
     
   </url>
   
@@ -61,20 +89,6 @@
     <loc>http://linyimeng.live/2017/04/07/rong-mall-sd-001/</loc>
     
     <lastmod>2017-04-10T14:07:22.674Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://linyimeng.live/2017/04/06/Markdown-Guide/</loc>
-    
-    <lastmod>2017-04-07T17:33:25.018Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://linyimeng.live/2017/04/06/hexo/</loc>
-    
-    <lastmod>2017-04-07T17:29:04.758Z</lastmod>
     
   </url>
   

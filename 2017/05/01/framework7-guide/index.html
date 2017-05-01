@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="python," />
+  <meta name="keywords" content="framework7," />
 
 
 
@@ -88,17 +88,17 @@
 
 
 
-<meta name="description" content="之前的老项目了，突然来个电话说要换服务器，要迁移程序，老项目使用的是db2 v7，版本，python2.7，用ibm_db模块连接db2,ibm_db依赖于db2的odbc的驱动，翻找了半条官方文档，发现驱动现在最低版本都到9.1了。。。抱着试一试的态度在新服务器(windows server 2008 r2)上面折腾下">
-<meta name="keywords" content="python">
+<meta name="description" content="好长一段时间没写技术总结了，在搞一个比较紧急的小项目:一个信息查询的小系统，要在移动端运行，经朋友介绍使用framework7这个前端框架，这个框架用来做快速开发，做原型给客户展示还是非常不错的。">
+<meta name="keywords" content="framework7">
 <meta property="og:type" content="article">
-<meta property="og:title" content="windows server 2008 r2 python2.7连接db2">
-<meta property="og:url" content="http://linyimeng.live/2017/04/12/win-python2-7-db2/index.html">
+<meta property="og:title" content="framework7个人指南">
+<meta property="og:url" content="http://linyimeng.live/2017/05/01/framework7-guide/index.html">
 <meta property="og:site_name" content="林一梦技术分享">
-<meta property="og:description" content="之前的老项目了，突然来个电话说要换服务器，要迁移程序，老项目使用的是db2 v7，版本，python2.7，用ibm_db模块连接db2,ibm_db依赖于db2的odbc的驱动，翻找了半条官方文档，发现驱动现在最低版本都到9.1了。。。抱着试一试的态度在新服务器(windows server 2008 r2)上面折腾下">
-<meta property="og:updated_time" content="2017-04-13T03:53:32.575Z">
+<meta property="og:description" content="好长一段时间没写技术总结了，在搞一个比较紧急的小项目:一个信息查询的小系统，要在移动端运行，经朋友介绍使用framework7这个前端框架，这个框架用来做快速开发，做原型给客户展示还是非常不错的。">
+<meta property="og:updated_time" content="2017-05-01T14:24:49.716Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="windows server 2008 r2 python2.7连接db2">
-<meta name="twitter:description" content="之前的老项目了，突然来个电话说要换服务器，要迁移程序，老项目使用的是db2 v7，版本，python2.7，用ibm_db模块连接db2,ibm_db依赖于db2的odbc的驱动，翻找了半条官方文档，发现驱动现在最低版本都到9.1了。。。抱着试一试的态度在新服务器(windows server 2008 r2)上面折腾下">
+<meta name="twitter:title" content="framework7个人指南">
+<meta name="twitter:description" content="好长一段时间没写技术总结了，在搞一个比较紧急的小项目:一个信息查询的小系统，要在移动端运行，经朋友介绍使用framework7这个前端框架，这个框架用来做快速开发，做原型给客户展示还是非常不错的。">
 
 
 
@@ -139,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://linyimeng.live/2017/04/12/win-python2-7-db2/"/>
+  <link rel="canonical" href="http://linyimeng.live/2017/05/01/framework7-guide/"/>
 
 
 
 
 
-  <title> windows server 2008 r2 python2.7连接db2 | 林一梦技术分享 </title>
+  <title> framework7个人指南 | 林一梦技术分享 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -284,7 +284,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://linyimeng.live/2017/04/12/win-python2-7-db2/">
+    <link itemprop="mainEntityOfPage" href="http://linyimeng.live/2017/05/01/framework7-guide/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yimeng">
@@ -305,7 +305,7 @@
             
             
               
-                windows server 2008 r2 python2.7连接db2
+                framework7个人指南
               
             
           </h1>
@@ -320,8 +320,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-12T19:30:00+08:00">
-                2017-04-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-01T22:01:00+08:00">
+                2017-05-01
               </time>
             
 
@@ -343,8 +343,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
+                  <a href="/categories/指南集/" itemprop="url" rel="index">
+                    <span itemprop="name">指南集</span>
                   </a>
                 </span>
 
@@ -361,7 +361,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/04/12/win-python2-7-db2/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/05/01/framework7-guide/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -370,7 +370,7 @@
 
           
           
-             <span id="/2017/04/12/win-python2-7-db2/" class="leancloud_visitors" data-flag-title="windows server 2008 r2 python2.7连接db2">
+             <span id="/2017/05/01/framework7-guide/" class="leancloud_visitors" data-flag-title="framework7个人指南">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -399,22 +399,30 @@
       
 
       
-        <p>之前的老项目了，突然来个电话说要换服务器，要迁移程序，老项目使用的是db2 v7，版本，python2.7，用ibm_db模块连接db2,ibm_db依赖于db2的odbc的驱动，翻找了半条官方文档，发现驱动现在最低版本都到9.1了。。。<br>抱着试一试的态度在新服务器(windows server 2008 r2)上面折腾下<br><a id="more"></a></p>
-<h2 id="准备相关安装包和软件包"><a href="#准备相关安装包和软件包" class="headerlink" title="准备相关安装包和软件包"></a>准备相关安装包和软件包</h2><ul>
-<li>python2.7官方 <a href="https://www.python.org/ftp/python/2.7.13/python-2.7.13.amd64.msi" target="_blank" rel="external">python-2.7.13.amd64.msi</a></li>
-<li>微软提供的 <a href="https://download.microsoft.com/download/7/9/6/796EF2E4-801B-4FC4-AB28-B59FBF6D907B/VCForPython27.msi" target="_blank" rel="external">VCForPython27.msi</a></li>
-<li>python ibm_db模块 <a href="https://pypi.python.org/packages/54/8a/54857a841cbd485d68f9852dfc16d27b069987a65ade38bb9288471ae98b/ibm_db-2.0.7.tar.gz" target="_blank" rel="external">ibm_db-2.0.7.tar.gz</a></li>
-<li>ibm官方odbc的驱动 <a href="https://public.dhe.ibm.com/ibmdl/export/pub/software/data/db2/drivers/odbc_cli/nt32_odbc_cli.zip" target="_blank" rel="external">nt32_odbc_cli.zip</a></li>
+        <p>好长一段时间没写技术总结了，在搞一个比较紧急的小项目:一个信息查询的小系统，要在移动端运行，经朋友介绍使用framework7这个前端框架，这个框架用来做快速开发，做原型给客户展示还是非常不错的。<br><a id="more"></a><br>贴一段官方介绍：</p>
+<p>Framework7 是一个开源免费的框架可以用来开发混合移动应用（原生和HTML混合）或者开发 iOS &amp; Android 风格的WEB APP。也可以用来作为原型开发工具，可以迅速创建一个应用的原型。</p>
+<p>Framework7 最主要的功能是可以使用HTML、CSS和JS来开发iOS7应用。Framework7 是完全免费开源的。</p>
+<p>Framework7 并不能兼容所有的设备。她只专注于为 iOS 和 Google Material 设计提供最好的体验。</p>
+<p>如果你想开发 iOS 或者 Android 混合应用（Phonegap）或者你想开发 iOS 和 Google Material 风格的WEB APP，那么Framework7将会是你的首选。</p>
+<h2 id="获取"><a href="#获取" class="headerlink" title="获取"></a>获取</h2><p>从官网获取源代码包和文档</p>
+<ul>
+<li><a href="http://framework7.io" target="_blank" rel="external">官方地址</a></li>
+<li><a href="http://framework7.cn/" target="_blank" rel="external">中文官方地址</a></li>
+<li><a href="http://docs.framework7.cn/" target="_blank" rel="external">中文文档地址</a></li>
 </ul>
-<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ol>
-<li>直接运行 <code>python-2.7.13.amd64.msi</code> 安装即可</li>
-<li>设置系统环境变量，让windows系统可以找的到python.exe, pip等命令</li>
-<li>安装完成后，安装 <code>VCForPython27.msi</code> </li>
-<li>解压 <code>ibm_db-2.0.7.tar.gz</code> 至 <code>ibm_db-2.0.7</code> 文件夹下</li>
-<li>解压 <code>nt32_odbc_cli.zip</code> 至 <code>ibm_db-2.0.7</code> 下</li>
-<li>进入 <code>ibm_db-2.0.7</code> 目录下运行<code>python setup.py install</code></li>
-</ol>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>经测试，可正常连接。万幸，万幸！</p>
+<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>使用非常简单，按照<a href="http://docs.framework7.cn/" target="_blank" rel="external">文档</a>来一遍应该几乎都懂了。</p>
+<p>默认情况下 Framework7 会使用 Ajax 加载所有的页面,除了index.html和带有 external class的链接（<a href="somepage.html" class="external">）和没有正确 href 值的链接（比如是空的或者是 #）</a></p>
+<p>官方文档学习注意以下：</p>
+<ul>
+<li>DOM7(一个和jquery基本一样的库，几乎根jquery一模一样)</li>
+<li>index.html</li>
+<li>view 概念</li>
+<li>page 概念</li>
+<li>路由器，page, view之间的相互跳转</li>
+<li>view,page的一些事件(创建，销毁。。。)，回调</li>
+<li>缓存相关</li>
+<li>组件应用</li>
+</ul>
 
       
     </div>
@@ -465,7 +473,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/python/" rel="tag"># python</a>
+            <a href="/tags/framework7/" rel="tag"># framework7</a>
           
         </div>
       
@@ -478,8 +486,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/13/ecshop-add-menu/" rel="next" title="ecshop二开--增加菜单">
-                <i class="fa fa-chevron-left"></i> ecshop二开--增加菜单
+              <a href="/2017/05/01/linux-study-0001/" rel="next" title="linux命令w,history,top,df,netstat学习 ">
+                <i class="fa fa-chevron-left"></i> linux命令w,history,top,df,netstat学习 
               </a>
             
           </div>
@@ -488,8 +496,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/07/rong-mall-sd-001/" rel="prev" title="荣远商城二开-部署文档">
-                荣远商城二开-部署文档 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/19/Simple-RTMP-Server-Deploy/" rel="prev" title="Simple-RTMP-Server 部署配置指南">
+                Simple-RTMP-Server 部署配置指南 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -632,7 +640,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备相关安装包和软件包"><span class="nav-number">1.</span> <span class="nav-text">准备相关安装包和软件包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装步骤"><span class="nav-number">2.</span> <span class="nav-text">安装步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">3.</span> <span class="nav-text">测试</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取"><span class="nav-number">1.</span> <span class="nav-text">获取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何使用"><span class="nav-number">2.</span> <span class="nav-text">如何使用</span></a></li></ol></div>
             
 
           </div>

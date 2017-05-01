@@ -3,6 +3,121 @@
 
 
     
+  <url>
+    <loc>http://linyimeng.live/2017/05/01/linux-study-0001/</loc>
+    <lastmod>2017-05-01T15:09:09.840Z</lastmod>
+    <data>
+        <display>
+        <title>linux命令w,history,top,df,netstat学习 </title>
+        <pubTime>2017-05-01T14:29:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="linux" url="http://linyimeng.live/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://linyimeng.live/2017/04/13/nginx-php5-6-fpm-error/</loc>
+    <lastmod>2017-05-01T14:25:12.256Z</lastmod>
+    <data>
+        <display>
+        <title>ubuntu16.04 nginx php5-6-fpm开启错误提示</title>
+        <pubTime>2017-04-13T15:45:00.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>nginx</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://linyimeng.live/2017/05/01/framework7-guide/</loc>
+    <lastmod>2017-05-01T14:24:49.716Z</lastmod>
+    <data>
+        <display>
+        <title>framework7个人指南</title>
+        <pubTime>2017-05-01T14:01:00.000Z</pubTime>
+        
+        <tag>framework7</tag>
+         
+         
+           
+             
+              <breadCrumb title="指南集" url="http://linyimeng.live/categories/%E6%8C%87%E5%8D%97%E9%9B%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://linyimeng.live/2017/04/06/hexo/</loc>
+    <lastmod>2017-05-01T14:24:33.052Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo 指南</title>
+        <pubTime>2017-04-06T12:01:00.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="指南集" url="http://linyimeng.live/categories/%E6%8C%87%E5%8D%97%E9%9B%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://linyimeng.live/2017/04/06/Markdown-Guide/</loc>
+    <lastmod>2017-05-01T14:24:23.668Z</lastmod>
+    <data>
+        <display>
+        <title>Markdown 指南</title>
+        <pubTime>2017-04-06T12:47:00.000Z</pubTime>
+        
+        <tag>Markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="指南集" url="http://linyimeng.live/categories/%E6%8C%87%E5%8D%97%E9%9B%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://linyimeng.live/2017/04/14/Crontab-guide/</loc>
+    <lastmod>2017-05-01T14:24:05.788Z</lastmod>
+    <data>
+        <display>
+        <title>Crontab个人指南</title>
+        <pubTime>2017-04-14T06:53:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="指南集" url="http://linyimeng.live/categories/%E6%8C%87%E5%8D%97%E9%9B%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://linyimeng.live/2017/04/19/Simple-RTMP-Server-Deploy/</loc>
@@ -36,47 +151,6 @@
              
               <breadCrumb title="资源" url="http://linyimeng.live/categories/%E8%B5%84%E6%BA%90/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://linyimeng.live/2017/04/14/Crontab-guide/</loc>
-    <lastmod>2017-04-14T08:41:07.939Z</lastmod>
-    <data>
-        <display>
-        <title>Crontab个人指南</title>
-        <pubTime>2017-04-14T06:53:00.000Z</pubTime>
-        
-        <tag>指南</tag>
-         
-         
-           
-             
-              <breadCrumb title="指南集" url="http://linyimeng.live/categories/%E6%8C%87%E5%8D%97%E9%9B%86/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://linyimeng.live/2017/04/13/nginx-php5-6-fpm-error/</loc>
-    <lastmod>2017-04-13T17:19:54.596Z</lastmod>
-    <data>
-        <display>
-        <title>ubuntu16.04 nginx php5-6-fpm开启错误提示</title>
-        <pubTime>2017-04-13T15:45:00.000Z</pubTime>
-        
-        <tag>php</tag>
-         
-        <tag>nginx</tag>
-         
-        <tag>ubuntu</tag>
-         
-         
-           
         </display>
     </data>
     </url>
@@ -157,50 +231,6 @@
            
              
               <breadCrumb title="荣远商城二开" url="http://linyimeng.live/categories/%E8%8D%A3%E8%BF%9C%E5%95%86%E5%9F%8E%E4%BA%8C%E5%BC%80/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://linyimeng.live/2017/04/06/Markdown-Guide/</loc>
-    <lastmod>2017-04-07T17:33:25.018Z</lastmod>
-    <data>
-        <display>
-        <title>Markdown 指南</title>
-        <pubTime>2017-04-06T12:47:00.000Z</pubTime>
-        
-        <tag>Markdown</tag>
-         
-        <tag>指南</tag>
-         
-         
-           
-             
-              <breadCrumb title="指南集" url="http://linyimeng.live/categories/%E6%8C%87%E5%8D%97%E9%9B%86/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://linyimeng.live/2017/04/06/hexo/</loc>
-    <lastmod>2017-04-07T17:29:04.758Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo 指南</title>
-        <pubTime>2017-04-06T12:01:00.000Z</pubTime>
-        
-        <tag>指南</tag>
-         
-        <tag>Hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="指南集" url="http://linyimeng.live/categories/%E6%8C%87%E5%8D%97%E9%9B%86/"/>
           
         </display>
     </data>
