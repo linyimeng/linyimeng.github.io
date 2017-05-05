@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="python,mssql," />
 
 
 
@@ -88,15 +88,17 @@
 
 
 
-<meta name="description" content="林一梦技术分享">
-<meta property="og:type" content="website">
-<meta property="og:title" content="林一梦技术分享">
-<meta property="og:url" content="http://linyimeng.live/tags/nginx/index.html">
+<meta name="description" content="ubuntu python3 安装 pyodbc 访问 mssql">
+<meta name="keywords" content="python,mssql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu16.04 python3 使用pyodbc连接ms sql server数据库">
+<meta property="og:url" content="http://linyimeng.live/2017/05/05/python3-install-pyodbc/index.html">
 <meta property="og:site_name" content="林一梦技术分享">
-<meta property="og:description" content="林一梦技术分享">
+<meta property="og:description" content="ubuntu python3 安装 pyodbc 访问 mssql">
+<meta property="og:updated_time" content="2017-05-05T14:28:35.068Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="林一梦技术分享">
-<meta name="twitter:description" content="林一梦技术分享">
+<meta name="twitter:title" content="ubuntu16.04 python3 使用pyodbc连接ms sql server数据库">
+<meta name="twitter:description" content="ubuntu python3 安装 pyodbc 访问 mssql">
 
 
 
@@ -137,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://linyimeng.live/tags/nginx/"/>
+  <link rel="canonical" href="http://linyimeng.live/2017/05/05/python3-install-pyodbc/"/>
 
 
 
 
 
-  <title> 标签: nginx | 林一梦技术分享 </title>
+  <title> ubuntu16.04 python3 使用pyodbc连接ms sql server数据库 | 林一梦技术分享 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -178,7 +180,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -272,74 +274,228 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        nginx
-        <small>标签</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/13/nginx-php5-6-fpm-error/" itemprop="url">
-              
-                <span itemprop="name">ubuntu16.04 nginx php5-6-fpm开启错误提示</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-13T23:45:00+08:00"
-              content="2017-04-13" >
-          04-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/07/nginx-php5-6-fpm/" itemprop="url">
-              
-                <span itemprop="name">ubuntu16.04 nginx php5.6-fpm搭建开发环境</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-07T18:55:00+08:00"
-              content="2017-04-07" >
-          04-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </div>
 
   
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://linyimeng.live/2017/05/05/python3-install-pyodbc/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yimeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="林一梦技术分享">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                ubuntu16.04 python3 使用pyodbc连接ms sql server数据库
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-05T21:10:00+08:00">
+                2017-05-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2017/05/05/python3-install-pyodbc/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/05/python3-install-pyodbc/" class="leancloud_visitors" data-flag-title="ubuntu16.04 python3 使用pyodbc连接ms sql server数据库">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>ubuntu python3 安装 pyodbc 访问 mssql<br><a id="more"></a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="安装odbc相关依赖，驱动"><a href="#安装odbc相关依赖，驱动" class="headerlink" title="安装odbc相关依赖，驱动"></a>安装odbc相关依赖，驱动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get install unixodbc unixodbc-dev freetds-dev tdsodbc python-dev</div></pre></td></tr></table></figure>
+<h3 id="配置odbc"><a href="#配置odbc" class="headerlink" title="配置odbc"></a>配置odbc</h3><p>安装后要对odbc进行配置<br>编辑文件：/etc/odbcinst.ini 添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[FreeTDS]</div><div class="line">Description = TDS driver (Sybase/MS SQL)</div><div class="line">#Driver,Setip路径可使用 locate libtdsodbc.so 进行查找，查找前请先运行updatedb命令</div><div class="line">Driver = /usr/lib/x86_64-linux-gnu/odbc/libtdsodbc.so</div><div class="line">Setup = /usr/lib/x86_64-linux-gnu/odbc/libtdsS.so</div><div class="line">#CPTimeout =</div><div class="line">#CPReuse =</div></pre></td></tr></table></figure></p>
+<h3 id="安装pyodbc"><a href="#安装pyodbc" class="headerlink" title="安装pyodbc"></a>安装pyodbc</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo pip install pyodbc</div></pre></td></tr></table></figure>
+<p>安装后重新运行<code>pip install pyodbc</code>即可成功，实在还无法安装，请根据实际报错解决，或者下方留言</p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> pyodbc</div><div class="line">conn = pyodbc.connect(<span class="string">"DRIVER=&#123;FreeTDS&#125;;SERVER=192.168.90.68,8801;UID=sa;PWD=123666;DATABASE=databasename"</span>)</div><div class="line">cur = conn.cursor()</div><div class="line">sql = <span class="string">"select * from users"</span></div><div class="line">cur.execute(sql)</div><div class="line">rs = cur.fetchall()</div><div class="line"><span class="keyword">for</span> r <span class="keyword">in</span> rs:</div><div class="line">    print(r[<span class="number">0</span>])</div></pre></td></tr></table></figure>
+<p>可以打印出结果，就说明连接成功了。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>鼓励鼓励</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="http://onzn8e1ny.bkt.clouddn.com/mm_facetoface_collect_qrcode_1491488846058.png" alt="yimeng WeChat Pay"/>
+          <p>微信鼓励</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="http://onzn8e1ny.bkt.clouddn.com/1491488866267.jpg" alt="yimeng Alipay"/>
+          <p>支付宝鼓励</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/mssql/" rel="tag"># mssql</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/05/virtualenv-guide/" rel="prev" title="virtualenv 个人指南">
+                virtualenv 个人指南 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -347,6 +503,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
 
         </div>
         
@@ -366,8 +528,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -440,6 +611,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装odbc相关依赖，驱动"><span class="nav-number">1.1.</span> <span class="nav-text">安装odbc相关依赖，驱动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置odbc"><span class="nav-number">1.2.</span> <span class="nav-text">配置odbc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装pyodbc"><span class="nav-number">1.3.</span> <span class="nav-text">安装pyodbc</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">2.</span> <span class="nav-text">测试</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -547,6 +734,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 

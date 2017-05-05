@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://linyimeng.live/2017/05/05/python3-install-pyodbc/</loc>
+    
+    <lastmod>2017-05-05T14:28:35.068Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://linyimeng.live/2017/05/05/virtualenv-guide/</loc>
+    
+    <lastmod>2017-05-05T12:57:19.607Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://linyimeng.live/2017/05/05/ubuntu-postgresql-install-guide/</loc>
     
     <lastmod>2017-05-05T03:29:18.451Z</lastmod>

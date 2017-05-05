@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="python,virtualenv," />
 
 
 
@@ -88,15 +88,17 @@
 
 
 
-<meta name="description" content="林一梦技术分享">
-<meta property="og:type" content="website">
-<meta property="og:title" content="林一梦技术分享">
-<meta property="og:url" content="http://linyimeng.live/tags/nginx/index.html">
+<meta name="description" content="virtualenv是解决一个机器上多个应用需要的Python版本不一致的问题，virtualenv就是用来为一个应用创建一套“隔离”的Python运行环境,解决了解决了不同应用间多版本的冲突问题。">
+<meta name="keywords" content="python,virtualenv">
+<meta property="og:type" content="article">
+<meta property="og:title" content="virtualenv 个人指南">
+<meta property="og:url" content="http://linyimeng.live/2017/05/05/virtualenv-guide/index.html">
 <meta property="og:site_name" content="林一梦技术分享">
-<meta property="og:description" content="林一梦技术分享">
+<meta property="og:description" content="virtualenv是解决一个机器上多个应用需要的Python版本不一致的问题，virtualenv就是用来为一个应用创建一套“隔离”的Python运行环境,解决了解决了不同应用间多版本的冲突问题。">
+<meta property="og:updated_time" content="2017-05-05T12:57:19.607Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="林一梦技术分享">
-<meta name="twitter:description" content="林一梦技术分享">
+<meta name="twitter:title" content="virtualenv 个人指南">
+<meta name="twitter:description" content="virtualenv是解决一个机器上多个应用需要的Python版本不一致的问题，virtualenv就是用来为一个应用创建一套“隔离”的Python运行环境,解决了解决了不同应用间多版本的冲突问题。">
 
 
 
@@ -137,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://linyimeng.live/tags/nginx/"/>
+  <link rel="canonical" href="http://linyimeng.live/2017/05/05/virtualenv-guide/"/>
 
 
 
 
 
-  <title> 标签: nginx | 林一梦技术分享 </title>
+  <title> virtualenv 个人指南 | 林一梦技术分享 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -178,7 +180,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -272,74 +274,247 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        nginx
-        <small>标签</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/13/nginx-php5-6-fpm-error/" itemprop="url">
-              
-                <span itemprop="name">ubuntu16.04 nginx php5-6-fpm开启错误提示</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-13T23:45:00+08:00"
-              content="2017-04-13" >
-          04-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/07/nginx-php5-6-fpm/" itemprop="url">
-              
-                <span itemprop="name">ubuntu16.04 nginx php5.6-fpm搭建开发环境</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-07T18:55:00+08:00"
-              content="2017-04-07" >
-          04-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </div>
 
   
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://linyimeng.live/2017/05/05/virtualenv-guide/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yimeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="林一梦技术分享">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                virtualenv 个人指南
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-05T20:41:00+08:00">
+                2017-05-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/指南集/" itemprop="url" rel="index">
+                    <span itemprop="name">指南集</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2017/05/05/virtualenv-guide/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/05/virtualenv-guide/" class="leancloud_visitors" data-flag-title="virtualenv 个人指南">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>virtualenv是解决一个机器上多个应用需要的Python版本不一致的问题，virtualenv就是用来为一个应用创建一套“隔离”的Python运行环境,解决了解决了不同应用间多版本的冲突问题。<br><a id="more"></a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>安装非常简单<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo pip3 install virtualenv</div></pre></td></tr></table></figure></p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>使用也非常简单，就是一些简单的命令</p>
+<p>使用步骤如下：</p>
+<ol>
+<li><p>创建目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ mkdir myproject</div><div class="line">$ cd myproject/</div></pre></td></tr></table></figure>
+</li>
+<li><p>创建一个独立的Python运行环境，命名为myenv</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">virtualenv --no-site-packages myenv</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>命令virtualenv就可以创建一个独立的Python运行环境，参数–no-site-packages的作用是我们可以得到了一个不带任何第三方包的“干净”的Python运行环境，即已经安装到系统Python环境中的所有第三方包都不会复制过来。</p>
+<ol>
+<li>用source进入该环境,在 <code>myenv</code> 目录下<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ source ./bin/activate</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>命令提示符会改变，有个(myenv)前缀，表示当前环境是一个名为myenv的Python环境,你可以下面正常使用<code>pip</code>安装各种第三方包，并运行<code>python</code>命令</p>
+<ol>
+<li>退出<code>myenv</code>环境，使用deactivate命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(myenv) ...$ deactivate</div></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>鼓励鼓励</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="http://onzn8e1ny.bkt.clouddn.com/mm_facetoface_collect_qrcode_1491488846058.png" alt="yimeng WeChat Pay"/>
+          <p>微信鼓励</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="http://onzn8e1ny.bkt.clouddn.com/1491488866267.jpg" alt="yimeng Alipay"/>
+          <p>支付宝鼓励</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/virtualenv/" rel="tag"># virtualenv</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/05/python3-install-pyodbc/" rel="next" title="ubuntu16.04 python3 使用pyodbc连接ms sql server数据库">
+                <i class="fa fa-chevron-left"></i> ubuntu16.04 python3 使用pyodbc连接ms sql server数据库
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/05/ubuntu-postgresql-install-guide/" rel="prev" title="ubuntu16.04 postgresql 安装个人指南">
+                ubuntu16.04 postgresql 安装个人指南 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -347,6 +522,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
 
         </div>
         
@@ -366,8 +547,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -440,6 +630,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">2.</span> <span class="nav-text">使用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -547,6 +753,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
