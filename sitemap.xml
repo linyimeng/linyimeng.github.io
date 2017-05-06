@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://linyimeng.live/2017/05/06/git-oschina-use-guide/</loc>
+    
+    <lastmod>2017-05-06T03:42:20.918Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://linyimeng.live/2017/05/05/django-use-mssql/</loc>
     
     <lastmod>2017-05-05T15:58:09.473Z</lastmod>
