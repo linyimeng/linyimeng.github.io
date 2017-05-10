@@ -4,17 +4,17 @@
 
     
   <url>
-    <loc>http://linyimeng.live/2017/05/07/rong-mall-sd-002/</loc>
-    <lastmod>2017-05-07T12:30:08.315Z</lastmod>
+    <loc>http://linyimeng.live/2017/05/10/nginx-conf-002/</loc>
+    <lastmod>2017-05-10T14:54:54.300Z</lastmod>
     <data>
         <display>
-        <title>蓉远商城二开-开发进度对照</title>
-        <pubTime>2017-05-07T11:43:00.000Z</pubTime>
+        <title>windows server上nginx 反向代理和负载均衡upstream实战配置</title>
+        <pubTime>2017-05-10T14:16:00.000Z</pubTime>
         
          
            
              
-              <breadCrumb title="蓉远商城" url="http://linyimeng.live/categories/%E8%93%89%E8%BF%9C%E5%95%86%E5%9F%8E/"/>
+              <breadCrumb title="nginx" url="http://linyimeng.live/categories/nginx/"/>
           
         </display>
     </data>
@@ -22,17 +22,19 @@
 
     
   <url>
-    <loc>http://linyimeng.live/2017/05/07/rong-mall-sd-001/</loc>
-    <lastmod>2017-05-07T12:24:26.871Z</lastmod>
+    <loc>http://linyimeng.live/2017/05/10/nginx-conf-001/</loc>
+    <lastmod>2017-05-10T14:14:52.671Z</lastmod>
     <data>
         <display>
-        <title>荣远商城二开-部署文档</title>
-        <pubTime>2017-05-07T12:10:00.000Z</pubTime>
+        <title>nginx 配置部分详解</title>
+        <pubTime>2017-05-10T14:11:00.000Z</pubTime>
         
+        <tag>nginx</tag>
+         
          
            
              
-              <breadCrumb title="蓉远商城" url="http://linyimeng.live/categories/%E8%93%89%E8%BF%9C%E5%95%86%E5%9F%8E/"/>
+              <breadCrumb title="nginx" url="http://linyimeng.live/categories/nginx/"/>
           
         </display>
     </data>
@@ -41,7 +43,7 @@
     
   <url>
     <loc>http://linyimeng.live/2017/04/13/ecshop-add-menu/</loc>
-    <lastmod>2017-05-07T12:22:30.971Z</lastmod>
+    <lastmod>2017-05-10T14:07:04.333Z</lastmod>
     <data>
         <display>
         <title>ecshop二开--增加菜单</title>
@@ -52,7 +54,43 @@
          
            
              
-              <breadCrumb title="荣远商城" url="http://linyimeng.live/categories/%E8%8D%A3%E8%BF%9C%E5%95%86%E5%9F%8E/"/>
+              <breadCrumb title="php" url="http://linyimeng.live/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://linyimeng.live/2017/05/07/rong-mall-sd-002/</loc>
+    <lastmod>2017-05-10T14:06:42.482Z</lastmod>
+    <data>
+        <display>
+        <title>榕力商城二开-开发进度对照</title>
+        <pubTime>2017-05-07T11:43:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="php" url="http://linyimeng.live/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://linyimeng.live/2017/05/07/rong-mall-sd-001/</loc>
+    <lastmod>2017-05-10T14:06:31.139Z</lastmod>
+    <data>
+        <display>
+        <title>榕力商城二开-部署文档</title>
+        <pubTime>2017-05-07T12:10:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="php" url="http://linyimeng.live/categories/php/"/>
           
         </display>
     </data>
@@ -189,9 +227,9 @@
         <title>ubuntu16.04 nginx php5-6-fpm开启错误提示</title>
         <pubTime>2017-04-13T15:45:00.000Z</pubTime>
         
-        <tag>php</tag>
-         
         <tag>nginx</tag>
+         
+        <tag>php</tag>
          
          
            
@@ -324,9 +362,9 @@
         <title>ubuntu16.04 nginx php5.6-fpm搭建开发环境</title>
         <pubTime>2017-04-07T10:55:00.000Z</pubTime>
         
-        <tag>php</tag>
-         
         <tag>nginx</tag>
+         
+        <tag>php</tag>
          
         <tag>ubuntu</tag>
          

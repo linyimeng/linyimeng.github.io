@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="nginx," />
 
 
 
@@ -88,17 +88,17 @@
 
 
 
-<meta name="description" content="加密文档，仅供项目相关人员查看。">
-<meta name="keywords">
+<meta name="description" content="nginx 配置项部分内容详解，会随用到的发表新的博客更新探讨，内容主要方便备查。">
+<meta name="keywords" content="nginx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="榕力商城二开-部署文档">
-<meta property="og:url" content="http://linyimeng.live/2017/05/07/rong-mall-sd-001/index.html">
+<meta property="og:title" content="nginx 配置部分详解">
+<meta property="og:url" content="http://linyimeng.live/2017/05/10/nginx-conf-001/index.html">
 <meta property="og:site_name" content="林一梦技术分享">
-<meta property="og:description" content="加密文档，仅供项目相关人员查看。">
-<meta property="og:updated_time" content="2017-05-10T14:06:31.139Z">
+<meta property="og:description" content="nginx 配置项部分内容详解，会随用到的发表新的博客更新探讨，内容主要方便备查。">
+<meta property="og:updated_time" content="2017-05-10T14:14:52.671Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="榕力商城二开-部署文档">
-<meta name="twitter:description" content="加密文档，仅供项目相关人员查看。">
+<meta name="twitter:title" content="nginx 配置部分详解">
+<meta name="twitter:description" content="nginx 配置项部分内容详解，会随用到的发表新的博客更新探讨，内容主要方便备查。">
 
 
 
@@ -127,8 +127,8 @@
 
 <script>
 	(function(){
-		if('rong!yuan@yimeng'){
-			if (prompt('请输入文章密码','') !== 'rong!yuan@yimeng'){
+		if(''){
+			if (prompt('请输入文章密码','') !== ''){
 				alert('密码错误！');
 				window.location.href="/"; 
 			}
@@ -139,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://linyimeng.live/2017/05/07/rong-mall-sd-001/"/>
+  <link rel="canonical" href="http://linyimeng.live/2017/05/10/nginx-conf-001/"/>
 
 
 
 
 
-  <title> 榕力商城二开-部署文档 | 林一梦技术分享 </title>
+  <title> nginx 配置部分详解 | 林一梦技术分享 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -284,7 +284,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://linyimeng.live/2017/05/07/rong-mall-sd-001/">
+    <link itemprop="mainEntityOfPage" href="http://linyimeng.live/2017/05/10/nginx-conf-001/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yimeng">
@@ -305,7 +305,7 @@
             
             
               
-                榕力商城二开-部署文档
+                nginx 配置部分详解
               
             
           </h1>
@@ -320,8 +320,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-07T20:10:00+08:00">
-                2017-05-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T22:11:00+08:00">
+                2017-05-10
               </time>
             
 
@@ -343,8 +343,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/php/" itemprop="url" rel="index">
-                    <span itemprop="name">php</span>
+                  <a href="/categories/nginx/" itemprop="url" rel="index">
+                    <span itemprop="name">nginx</span>
                   </a>
                 </span>
 
@@ -361,7 +361,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/05/07/rong-mall-sd-001/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/05/10/nginx-conf-001/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -370,7 +370,7 @@
 
           
           
-             <span id="/2017/05/07/rong-mall-sd-001/" class="leancloud_visitors" data-flag-title="榕力商城二开-部署文档">
+             <span id="/2017/05/10/nginx-conf-001/" class="leancloud_visitors" data-flag-title="nginx 配置部分详解">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -399,59 +399,8 @@
       
 
       
-        <p>加密文档，仅供项目相关人员查看。<br><a id="more"></a></p>
-<h2 id="部署前准备"><a href="#部署前准备" class="headerlink" title="部署前准备"></a>部署前准备</h2><h3 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h3><p>需要提供支持程序运行的相关硬件设施，可采用相关云服务商提供的服务器(阿里云，华为云)，配置要求如下：(带~的为以上)</p>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>系统</th>
-<th>CPU</th>
-<th>内存</th>
-<th>永久性存储</th>
-<th>带宽</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>云服务器 (阿里云)</td>
-<td>centos7.2</td>
-<td>2核~</td>
-<td>4G~</td>
-<td>硬盘:100G~</td>
-<td>2M~</td>
-</tr>
-</tbody>
-</table>
-<h3 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h3><p>需提供一个经过备案后的域名，域名申请等可至 万网 等服务商注册备案</p>
-<h3 id="公众号"><a href="#公众号" class="headerlink" title="公众号"></a>公众号</h3><p>如需要接入公众号，需提供服务号，公众号申请入口</p>
-<h3 id="短信"><a href="#短信" class="headerlink" title="短信"></a>短信</h3><p>需提供短信服务商的接口认证信息</p>
-<h3 id="第三方支付"><a href="#第三方支付" class="headerlink" title="第三方支付"></a>第三方支付</h3><p>需要准备银联，支付宝，微信，京东等支付接口相关的接口调用凭证</p>
-<h3 id="邮件"><a href="#邮件" class="headerlink" title="邮件"></a>邮件</h3><p>需提供邮件服务器，建议使用QQ企业邮箱</p>
-<h3 id="文字，图片素材准备"><a href="#文字，图片素材准备" class="headerlink" title="文字，图片素材准备"></a>文字，图片素材准备</h3><p>需要准备一下素材</p>
-<ul>
-<li>网站商城名称</li>
-<li>网站logo图片</li>
-</ul>
-<h2 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h2><h3 id="服务器安装运行环境"><a href="#服务器安装运行环境" class="headerlink" title="服务器安装运行环境"></a>服务器安装运行环境</h3><p>系统需要安装如下环境</p>
-<ul>
-<li>服务端语言: PHP5.4</li>
-<li>web服务器: nginx1.10 </li>
-<li>数据库: MySQL5<h3 id="上传源码至服务器"><a href="#上传源码至服务器" class="headerlink" title="上传源码至服务器"></a>上传源码至服务器</h3>用ftp上传工具或者其他方法将商城系统的源代码包拷贝至服务器<h3 id="解压文件"><a href="#解压文件" class="headerlink" title="解压文件"></a>解压文件</h3>将压缩包中的文件解压到至指定文件夹，如解压至:<code>～/mall</code> 文件夹下<h3 id="修改nginx配置"><a href="#修改nginx配置" class="headerlink" title="修改nginx配置"></a>修改nginx配置</h3>修改～/mall/sconf路径下中的 <code>nginx_mall.conf</code> 文件中的root属性值，修改后的文件如下:<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># nginx_mall.conf</span></div><div class="line"><span class="section">server</span> &#123;</div><div class="line">    <span class="attribute">listen</span> <span class="number">88</span>;</div><div class="line">    <span class="attribute">server_name</span> localhost; <span class="comment"># 域名</span></div><div class="line">    <span class="attribute">index</span> index.php index.html;</div><div class="line">    <span class="attribute">root</span> /home/yimeng/mall; <span class="comment"># 网站路径</span></div><div class="line">    </div><div class="line">    <span class="attribute">location</span> <span class="regexp">~ \.php$</span> &#123;</div><div class="line">	<span class="attribute">include</span> snippets/fastcgi-php.conf;</div><div class="line">        <span class="attribute">fastcgi_pass</span> unix:/run/php/php5.6-fpm.sock;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="创建软链，使nginx生效"><a href="#创建软链，使nginx生效" class="headerlink" title="创建软链，使nginx生效"></a>创建软链，使nginx生效</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sudo ln -s ~/test/nginx_php_fpm.conf /etc/nginx/sites-enabled/</div><div class="line">$ sudo nginx -s reload</div></pre></td></tr></table></figure>
-<p>没有任何问题，则访问 example.com 站点地址根据实际情况自行访问</p>
-<p>访问后会出现安装引导页，根据安装引导页填写以下信息</p>
-<ul>
-<li>个人信息</li>
-<li>数据库信息</li>
-</ul>
-<p>安装完成后，请将 <code>～/mall</code> 路径下的 <code>install</code> 文件夹删除或者重命名</p>
-<p>安装完成后，默认的后台地址为：example.com/admin</p>
-<h2 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h2><p>个性化配置请交与相关网站管理员进行设置</p>
-<h2 id="第三方服务配置"><a href="#第三方服务配置" class="headerlink" title="第三方服务配置"></a>第三方服务配置</h2><p>商城系统完成业务需要与第三方系统进行交互，准备好相关第三方的接口调用凭证后，交与网站管理员进行配置</p>
-
+        <p>nginx 配置项部分内容详解，会随用到的发表新的博客更新探讨，内容主要方便备查。<br><a id="more"></a></p>
+<h2 id="nginx-部分配置详情"><a href="#nginx-部分配置详情" class="headerlink" title="nginx 部分配置详情"></a>nginx 部分配置详情</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">user</span> nobody;</div><div class="line"><span class="comment">#启动进程,通常设置成和cpu的数量相等</span></div><div class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;</div><div class="line"> </div><div class="line"><span class="comment">#全局错误日志及PID文件</span></div><div class="line"><span class="comment">#error_log  logs/error.log;</span></div><div class="line"><span class="comment">#error_log  logs/error.log  notice;</span></div><div class="line"><span class="comment">#error_log  logs/error.log  info;</span></div><div class="line"> </div><div class="line"><span class="comment">#pid        logs/nginx.pid;</span></div><div class="line"> </div><div class="line"><span class="comment">#工作模式及连接数上限</span></div><div class="line"><span class="section">events</span> &#123;</div><div class="line">    <span class="comment">#epoll是多路复用IO(I/O Multiplexing)中的一种方式,</span></div><div class="line">    <span class="comment">#仅用于linux2.6以上内核,可以大大提高nginx的性能</span></div><div class="line">    <span class="attribute">use</span>   <span class="literal">epoll</span>; </div><div class="line"> </div><div class="line">    <span class="comment">#单个后台worker process进程的最大并发链接数    </span></div><div class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;</div><div class="line"> </div><div class="line">    <span class="comment"># 并发总数是 worker_processes 和 worker_connections 的乘积</span></div><div class="line">    <span class="comment"># 即 max_clients = worker_processes * worker_connections</span></div><div class="line">    <span class="comment"># 在设置了反向代理的情况下，max_clients = worker_processes * worker_connections / 4  为什么</span></div><div class="line">    <span class="comment"># 为什么上面反向代理要除以4，应该说是一个经验值</span></div><div class="line">    <span class="comment"># 根据以上条件，正常情况下的Nginx Server可以应付的最大连接数为：4 * 8000 = 32000</span></div><div class="line">    <span class="comment"># worker_connections 值的设置跟物理内存大小有关</span></div><div class="line">    <span class="comment"># 因为并发受IO约束，max_clients的值须小于系统可以打开的最大文件数</span></div><div class="line">    <span class="comment"># 而系统可以打开的最大文件数和内存大小成正比，一般1GB内存的机器上可以打开的文件数大约是10万左右</span></div><div class="line">    <span class="comment"># 我们来看看360M内存的VPS可以打开的文件句柄数是多少：</span></div><div class="line">    <span class="comment"># $ cat /proc/sys/fs/file-max</span></div><div class="line">    <span class="comment"># 输出 34336</span></div><div class="line">    <span class="comment"># 32000 &lt; 34336，即并发连接总数小于系统可以打开的文件句柄总数，这样就在操作系统可以承受的范围之内</span></div><div class="line">    <span class="comment"># 所以，worker_connections 的值需根据 worker_processes 进程数目和系统可以打开的最大文件总数进行适当地进行设置</span></div><div class="line">    <span class="comment"># 使得并发总数小于操作系统可以打开的最大文件数目</span></div><div class="line">    <span class="comment"># 其实质也就是根据主机的物理CPU和内存进行配置</span></div><div class="line">    <span class="comment"># 当然，理论上的并发总数可能会和实际有所偏差，因为主机还有其他的工作进程需要消耗系统资源。</span></div><div class="line">    <span class="comment"># ulimit -SHn 65535</span></div><div class="line"> </div><div class="line">&#125;</div><div class="line"> </div><div class="line"> </div><div class="line"><span class="section">http</span> &#123;</div><div class="line">    <span class="comment">#设定mime类型,类型由mime.type文件定义</span></div><div class="line">    <span class="attribute">include</span>    mime.types;</div><div class="line">    <span class="attribute">default_type</span>  application/octet-stream;</div><div class="line">    <span class="comment">#设定日志格式</span></div><div class="line">    <span class="attribute">log_format</span>  main  <span class="string">'<span class="variable">$remote_addr</span> - <span class="variable">$remote_user</span> [<span class="variable">$time_local</span>] "<span class="variable">$request</span>" '</span></div><div class="line">                      <span class="string">'<span class="variable">$status</span> <span class="variable">$body_bytes_sent</span> "<span class="variable">$http_referer</span>" '</span></div><div class="line">                      <span class="string">'"<span class="variable">$http_user_agent</span>" "<span class="variable">$http_x_forwarded_for</span>"'</span>;</div><div class="line"> </div><div class="line">    <span class="attribute">access_log</span>  logs/access.log  main;</div><div class="line"> </div><div class="line">    <span class="comment">#sendfile 指令指定 nginx 是否调用 sendfile 函数（zero copy 方式）来输出文件，</span></div><div class="line">    <span class="comment">#对于普通应用，必须设为 on,</span></div><div class="line">    <span class="comment">#如果用来进行下载等应用磁盘IO重负载应用，可设置为 off，</span></div><div class="line">    <span class="comment">#以平衡磁盘与网络I/O处理速度，降低系统的uptime.</span></div><div class="line">    <span class="attribute">sendfile</span>     <span class="literal">on</span>;</div><div class="line">    <span class="comment">#tcp_nopush     on;</span></div><div class="line"> </div><div class="line">    <span class="comment">#连接超时时间</span></div><div class="line">    <span class="comment">#keepalive_timeout  0;</span></div><div class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;</div><div class="line">    <span class="attribute">tcp_nodelay</span>     <span class="literal">on</span>;</div><div class="line"> </div><div class="line">    <span class="comment">#开启gzip压缩</span></div><div class="line">    <span class="attribute">gzip</span>  <span class="literal">on</span>;</div><div class="line">    <span class="attribute">gzip_disable</span> <span class="string">"MSIE [1-6]."</span>;</div><div class="line"> </div><div class="line">    <span class="comment">#设定请求缓冲</span></div><div class="line">    <span class="attribute">client_header_buffer_size</span>    <span class="number">128k</span>;</div><div class="line">    <span class="attribute">large_client_header_buffers</span>  <span class="number">4</span> <span class="number">128k</span>;</div><div class="line"> </div><div class="line"> </div><div class="line">    <span class="comment">#设定虚拟主机配置</span></div><div class="line">    <span class="section">server</span> &#123;</div><div class="line">        <span class="comment">#侦听80端口</span></div><div class="line">        <span class="attribute">listen</span>    <span class="number">80</span>;</div><div class="line">        <span class="comment">#定义使用 www.nginx.cn访问</span></div><div class="line">        <span class="attribute">server_name</span>  www.nginx.cn;</div><div class="line"> </div><div class="line">        <span class="comment">#定义服务器的默认网站根目录位置</span></div><div class="line">        <span class="attribute">root</span> html;</div><div class="line"> </div><div class="line">        <span class="comment">#设定本虚拟主机的访问日志</span></div><div class="line">        <span class="attribute">access_log</span>  logs/nginx.access.log  main;</div><div class="line"> </div><div class="line">        <span class="comment">#默认请求</span></div><div class="line">        <span class="attribute">location</span> / &#123;</div><div class="line">            </div><div class="line">            <span class="comment">#定义首页索引文件的名称</span></div><div class="line">            <span class="attribute">index</span> index.php index.html index.htm;   </div><div class="line"> </div><div class="line">        &#125;</div><div class="line"> </div><div class="line">        <span class="comment"># 定义错误提示页面</span></div><div class="line">        <span class="attribute">error_page</span>   <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span> /50x.html;</div><div class="line">        <span class="attribute">location</span> = /50x.html &#123;</div><div class="line">        &#125;</div><div class="line"> </div><div class="line">        <span class="comment">#静态文件，nginx自己处理</span></div><div class="line">        <span class="attribute">location</span> <span class="regexp">~ ^/(images|javascript|js|css|flash|media|static)/</span> &#123;</div><div class="line">            </div><div class="line">            <span class="comment">#过期30天，静态文件不怎么更新，过期可以设大一点，</span></div><div class="line">            <span class="comment">#如果频繁更新，则可以设置得小一点。</span></div><div class="line">            <span class="attribute">expires</span> <span class="number">30d</span>;</div><div class="line">        &#125;</div><div class="line"> </div><div class="line">        <span class="comment">#PHP 脚本请求全部转发到 FastCGI处理. 使用FastCGI默认配置.</span></div><div class="line">        <span class="attribute">location</span> <span class="regexp">~ .php$</span> &#123;</div><div class="line">            <span class="attribute">fastcgi_pass</span> <span class="number">127.0.0.1:9000</span>;</div><div class="line">            <span class="attribute">fastcgi_index</span> index.php;</div><div class="line">            <span class="attribute">fastcgi_param</span>  SCRIPT_FILENAME <span class="variable">$document_root</span><span class="variable">$fastcgi_script_name</span>;</div><div class="line">            <span class="attribute">include</span> fastcgi_params;</div><div class="line">        &#125;</div><div class="line"> </div><div class="line">        <span class="comment">#禁止访问 .htxxx 文件</span></div><div class="line">            <span class="attribute">location</span> <span class="regexp">~ /.ht</span> &#123;</div><div class="line">            <span class="attribute">deny</span> all;</div><div class="line">        &#125;</div><div class="line"> </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -499,6 +448,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/nginx/" rel="tag"># nginx</a>
+          
+        </div>
+      
 
       
         
@@ -508,8 +463,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/10/nginx-conf-001/" rel="next" title="nginx 配置部分详解">
-                <i class="fa fa-chevron-left"></i> nginx 配置部分详解
+              <a href="/2017/05/10/nginx-conf-002/" rel="next" title="windows server上nginx 反向代理和负载均衡upstream实战配置">
+                <i class="fa fa-chevron-left"></i> windows server上nginx 反向代理和负载均衡upstream实战配置
               </a>
             
           </div>
@@ -518,8 +473,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/07/rong-mall-sd-002/" rel="prev" title="榕力商城二开-开发进度对照">
-                榕力商城二开-开发进度对照 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/07/rong-mall-sd-001/" rel="prev" title="榕力商城二开-部署文档">
+                榕力商城二开-部署文档 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -662,7 +617,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#部署前准备"><span class="nav-number">1.</span> <span class="nav-text">部署前准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#硬件"><span class="nav-number">1.1.</span> <span class="nav-text">硬件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#域名"><span class="nav-number">1.2.</span> <span class="nav-text">域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#公众号"><span class="nav-number">1.3.</span> <span class="nav-text">公众号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#短信"><span class="nav-number">1.4.</span> <span class="nav-text">短信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三方支付"><span class="nav-number">1.5.</span> <span class="nav-text">第三方支付</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#邮件"><span class="nav-number">1.6.</span> <span class="nav-text">邮件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文字，图片素材准备"><span class="nav-number">1.7.</span> <span class="nav-text">文字，图片素材准备</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装系统"><span class="nav-number">2.</span> <span class="nav-text">安装系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器安装运行环境"><span class="nav-number">2.1.</span> <span class="nav-text">服务器安装运行环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上传源码至服务器"><span class="nav-number">2.2.</span> <span class="nav-text">上传源码至服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解压文件"><span class="nav-number">2.3.</span> <span class="nav-text">解压文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改nginx配置"><span class="nav-number">2.4.</span> <span class="nav-text">修改nginx配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建软链，使nginx生效"><span class="nav-number">2.5.</span> <span class="nav-text">创建软链，使nginx生效</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#个性化配置"><span class="nav-number">3.</span> <span class="nav-text">个性化配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三方服务配置"><span class="nav-number">4.</span> <span class="nav-text">第三方服务配置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#nginx-部分配置详情"><span class="nav-number">1.</span> <span class="nav-text">nginx 部分配置详情</span></a></li></ol></div>
             
 
           </div>
