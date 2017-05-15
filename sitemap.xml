@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://linyimeng.live/2017/05/15/php-laravel-first/</loc>
+    
+    <lastmod>2017-05-15T15:40:59.959Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://linyimeng.live/2017/05/15/aliyun-php5-3-Integrated-environment/</loc>
+    
+    <lastmod>2017-05-15T15:35:55.375Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://linyimeng.live/2017/05/07/rong-mall-sd-002/</loc>
+    
+    <lastmod>2017-05-13T02:01:32.057Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://linyimeng.live/2017/05/10/nginx-conf-002/</loc>
     
     <lastmod>2017-05-10T14:54:54.300Z</lastmod>
@@ -19,13 +40,6 @@
     <loc>http://linyimeng.live/2017/04/13/ecshop-add-menu/</loc>
     
     <lastmod>2017-05-10T14:07:04.333Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://linyimeng.live/2017/05/07/rong-mall-sd-002/</loc>
-    
-    <lastmod>2017-05-10T14:06:42.482Z</lastmod>
     
   </url>
   

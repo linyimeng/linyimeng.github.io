@@ -4,6 +4,62 @@
 
     
   <url>
+    <loc>http://linyimeng.live/2017/05/15/php-laravel-first/</loc>
+    <lastmod>2017-05-15T15:40:59.959Z</lastmod>
+    <data>
+        <display>
+        <title>laravel 学习资料整理</title>
+        <pubTime>2017-05-15T15:36:00.000Z</pubTime>
+        
+        <tag>laravel</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://linyimeng.live/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://linyimeng.live/2017/05/15/aliyun-php5-3-Integrated-environment/</loc>
+    <lastmod>2017-05-15T15:35:55.375Z</lastmod>
+    <data>
+        <display>
+        <title>阿里云使用LNMP集成镜像后感想</title>
+        <pubTime>2017-05-15T15:19:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="linux" url="http://linyimeng.live/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://linyimeng.live/2017/05/07/rong-mall-sd-002/</loc>
+    <lastmod>2017-05-13T02:01:32.057Z</lastmod>
+    <data>
+        <display>
+        <title>榕力商城二开-开发进度对照</title>
+        <pubTime>2017-05-07T11:43:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="php" url="http://linyimeng.live/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://linyimeng.live/2017/05/10/nginx-conf-002/</loc>
     <lastmod>2017-05-10T14:54:54.300Z</lastmod>
     <data>
@@ -51,24 +107,6 @@
         
         <tag>ecshop</tag>
          
-         
-           
-             
-              <breadCrumb title="php" url="http://linyimeng.live/categories/php/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://linyimeng.live/2017/05/07/rong-mall-sd-002/</loc>
-    <lastmod>2017-05-10T14:06:42.482Z</lastmod>
-    <data>
-        <display>
-        <title>榕力商城二开-开发进度对照</title>
-        <pubTime>2017-05-07T11:43:00.000Z</pubTime>
-        
          
            
              
@@ -227,9 +265,9 @@
         <title>ubuntu16.04 nginx php5-6-fpm开启错误提示</title>
         <pubTime>2017-04-13T15:45:00.000Z</pubTime>
         
-        <tag>nginx</tag>
-         
         <tag>php</tag>
+         
+        <tag>nginx</tag>
          
          
            
@@ -362,9 +400,9 @@
         <title>ubuntu16.04 nginx php5.6-fpm搭建开发环境</title>
         <pubTime>2017-04-07T10:55:00.000Z</pubTime>
         
-        <tag>nginx</tag>
-         
         <tag>php</tag>
+         
+        <tag>nginx</tag>
          
         <tag>ubuntu</tag>
          
