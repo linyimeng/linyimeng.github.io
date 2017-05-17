@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>http://linyimeng.live/2017/05/17/django-debug-toolbar/</loc>
+    <lastmod>2017-05-17T08:33:47.095Z</lastmod>
+    <data>
+        <display>
+        <title>django开发调试神器django debug toolbar的安装和使用</title>
+        <pubTime>2017-05-17T08:20:00.000Z</pubTime>
+        
+        <tag>django</tag>
+         
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="django" url="http://linyimeng.live/categories/django/"/>
+          
+             
+              <breadCrumb title="python" url="http://linyimeng.live/categories/django/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://linyimeng.live/2017/05/15/php-laravel-first/</loc>
     <lastmod>2017-05-15T15:40:59.959Z</lastmod>
     <data>
@@ -161,9 +186,9 @@
         <title>ubuntu16.04 django1.11使用django-pyodbc-azure连接ms sql server数据库</title>
         <pubTime>2017-05-05T15:29:00.000Z</pubTime>
         
-        <tag>python</tag>
-         
         <tag>django</tag>
+         
+        <tag>python</tag>
          
          
            
@@ -265,9 +290,9 @@
         <title>ubuntu16.04 nginx php5-6-fpm开启错误提示</title>
         <pubTime>2017-04-13T15:45:00.000Z</pubTime>
         
-        <tag>php</tag>
-         
         <tag>nginx</tag>
+         
+        <tag>php</tag>
          
          
            
@@ -400,9 +425,9 @@
         <title>ubuntu16.04 nginx php5.6-fpm搭建开发环境</title>
         <pubTime>2017-04-07T10:55:00.000Z</pubTime>
         
-        <tag>php</tag>
-         
         <tag>nginx</tag>
+         
+        <tag>php</tag>
          
         <tag>ubuntu</tag>
          

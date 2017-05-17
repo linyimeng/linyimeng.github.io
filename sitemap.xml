@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://linyimeng.live/2017/05/17/django-debug-toolbar/</loc>
+    
+    <lastmod>2017-05-17T08:33:47.095Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://linyimeng.live/2017/05/15/php-laravel-first/</loc>
     
     <lastmod>2017-05-15T15:40:59.959Z</lastmod>
