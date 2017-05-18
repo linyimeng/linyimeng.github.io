@@ -4,6 +4,46 @@
 
     
   <url>
+    <loc>http://linyimeng.live/2017/05/19/windows-iis7-php5-6-sqlserver/</loc>
+    <lastmod>2017-05-18T17:32:49.711Z</lastmod>
+    <data>
+        <display>
+        <title>windows server下iis7+php5.6+sql server环境搭建</title>
+        <pubTime>2017-05-18T16:11:00.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://linyimeng.live/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://linyimeng.live/2017/05/19/thinkphp-iis7-url-rewrite/</loc>
+    <lastmod>2017-05-18T17:32:26.919Z</lastmod>
+    <data>
+        <display>
+        <title>iis7安装配置url rewrite模块</title>
+        <pubTime>2017-05-18T17:11:00.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://linyimeng.live/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://linyimeng.live/2017/05/17/django-debug-toolbar/</loc>
     <lastmod>2017-05-17T08:33:47.095Z</lastmod>
     <data>
