@@ -101,7 +101,7 @@
 <meta property="og:image" content="http://onzn8e1ny.bkt.clouddn.com/iis7-php3.png">
 <meta property="og:image" content="http://onzn8e1ny.bkt.clouddn.com/iis7-php4.png">
 <meta property="og:image" content="http://onzn8e1ny.bkt.clouddn.com/iis7-php5.png">
-<meta property="og:updated_time" content="2017-05-18T17:34:53.915Z">
+<meta property="og:updated_time" content="2017-05-23T12:55:24.175Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="windows server下iis7+php5.6+sql server环境搭建">
 <meta name="twitter:description" content="最近业务需求，需要在windows server下搭建php运行环境，为了在windows平台下方便统一管理，用iis7去带起php，幸好，windows下iis7的配置还是很简单的">
@@ -421,7 +421,8 @@
 <p>安装完成后启动iis7管理器，会出现如下图标<br><img src="http://onzn8e1ny.bkt.clouddn.com/IIS-PHP-MANAGE.png" alt=""></p>
 <h3 id="3-解压下载的PHP5-6"><a href="#3-解压下载的PHP5-6" class="headerlink" title="3. 解压下载的PHP5.6"></a>3. 解压下载的PHP5.6</h3><p>将下载下来的 <a href="http://onzn8e1ny.bkt.clouddn.com/php-5.6.30-nts-Win32-VC11-x86.zip" target="_blank" rel="external"><code>php-5.6.30-nts-Win32-VC11-x86.zip</code></a>解压出来，比如说解压至<code>D:/php/5.6-nts</code></p>
 <h3 id="4-配置PHP-Manager，并测试"><a href="#4-配置PHP-Manager，并测试" class="headerlink" title="4. 配置PHP Manager，并测试"></a>4. 配置PHP Manager，并测试</h3><p>具体配置过程请参考 <a href="http://jingyan.baidu.com/article/4d58d541147ac49dd4e9c008.html" target="_blank" rel="external">在IIS7中配置PHP5.6</a></p>
-<p>在配置好后，我们可以点击 check phpinfo()进行测试<br><img src="http://onzn8e1ny.bkt.clouddn.com/iis7-php.png" alt=""><br>随便选中一个站点进行测试<br><img src="http://onzn8e1ny.bkt.clouddn.com/iis7-php2.png" alt=""><br>如果看到以下页面，则代表安装成功了<br><img src="http://onzn8e1ny.bkt.clouddn.com/iis7-php3.png" alt=""></p>
+<p>在配置好后，我们可以点击 check phpinfo()进行测试,如果测试出错，在cmd下运行<code>php -v</code>检查哪个文件无法加载，对应报错去解决</p>
+<p><img src="http://onzn8e1ny.bkt.clouddn.com/iis7-php.png" alt=""><br>随便选中一个站点进行测试<br><img src="http://onzn8e1ny.bkt.clouddn.com/iis7-php2.png" alt=""><br>如果看到以下页面，则代表安装成功了<br><img src="http://onzn8e1ny.bkt.clouddn.com/iis7-php3.png" alt=""></p>
 <h3 id="5-配置php连接sql-server驱动"><a href="#5-配置php连接sql-server驱动" class="headerlink" title="5. 配置php连接sql server驱动"></a>5. 配置php连接sql server驱动</h3><p>这个才是关键。</p>
 <ol>
 <li>将下载下来的<a href="http://onzn8e1ny.bkt.clouddn.com/php_pdo_sqlsrv.zip" target="_blank" rel="external"><code>php_pdo_sqlsrv.zip</code></a>解压出来，比如解压至<code>D:/php_pdo_sqlsrv</code></li>
